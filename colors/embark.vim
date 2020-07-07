@@ -69,6 +69,10 @@ let s:norm            = s:stardust
 let s:norm_subtle     = s:cosmos
 let s:visual          = s:bg_dark
 
+let s:head_a         = s:dark_blue
+let s:head_b         = s:blue
+let s:head_c         = s:dark_cyan
+
 " == UTILS AND HELPERS == 
 "
 " shamelessly stolen from hemisu: https://github.com/noahfrederick/vim-hemisu/
