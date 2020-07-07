@@ -18,6 +18,10 @@ if !exists("g:embark_terminal_italics")
   let g:embark_terminal_italics = 1
 endif
 
+if !exists("g:embark_terminalcolors")
+  let g:embark_termcolors = 256
+endif
+
 " == COLOR PALETTE == 
 "
 " TODO: Cterm values here are OG from Challenger Deep
