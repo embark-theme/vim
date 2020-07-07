@@ -164,7 +164,7 @@ call s:h("Search",        {"bg": s:dark_yellow, "fg": s:space})
 call s:h("MoreMsg",       {"fg": s:medium_gray, "gui": "bold", "cterm": "bold"})
 hi! link ModeMsg MoreMsg
 
-call s:h("LineNr",        {"fg": s:deep_space, "bg": s:bg_subtle})
+call s:h("LineNr",        {"fg": s:eclipse, "bg": s:bg_subtle})
 hi LineNr guibg=NONE ctermbg=NONE
 
 call s:h("CursorLineNr",  {"bg": s:bg_subtle, "fg": s:blue, "gui": "bold"})
