@@ -196,7 +196,7 @@ else
   call s:h("SpellRare",   {"cterm": "underline", "fg": s:red})
   call s:h("SpellLocal",  {"cterm": "underline", "fg": s:dark_green})
 endif
-call s:h("Pmenu",         {"fg": s:norm, "bg": s:space_subtle})
+call s:h("Pmenu",         {"fg": s:norm, "bg": s:deep_space})
 call s:h("PmenuSel",      {"fg": s:purple, "bg": s:space})
 call s:h("PmenuSbar",     {"fg": s:norm, "bg": s:bg_subtle})
 call s:h("PmenuThumb",    {"fg": s:norm, "bg": s:bg_subtle})
