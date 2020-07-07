@@ -209,6 +209,9 @@ call s:h("ColorColumn",   {"bg": s:bg_subtle})
 
 " == PLUGIN SUPPORT GROUPS ==
 "
+" vim-sneak
+hi link Sneak Search
+
 
 " HTML syntax
 hi! link htmlTag          Special
