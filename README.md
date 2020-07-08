@@ -2,6 +2,8 @@
 
 An ambitious Vim theme.
 
+![screenshot](embark-screenshot.png)
+
 ## Getting Started
 
 > At this time only terminals supporting truecolors will work. Make sure you have `set termguicolors` in your vimrc
