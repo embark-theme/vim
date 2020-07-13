@@ -30,6 +30,11 @@ let g:lightline = {
       \ }
 ```
 
+### Airline support
+
+Airline should just pick up on theme automatically, but if there is an issue with this it can be set manually.
+`let g:airline_theme = 'embark'`
+
 ## Configuration
 
 Embark offers a few configuration values to control features. Setting values to `1` will turn the feature on.
