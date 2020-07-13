@@ -15,7 +15,7 @@ let g:colors_name='embark'
 set background=dark
 
 if !exists("g:embark_terminal_italics")
-  let g:embark_terminal_italics = 1
+  let g:embark_terminal_italics = 0
 endif
 
 if !exists("g:embark_terminalcolors")
