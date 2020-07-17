@@ -5,39 +5,13 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
-   sodipodi:docname="Embark.svg"
-   id="svg8"
+   width="1170.9851"
+   height="913.88428"
+   viewBox="0 0 309.82507 241.80007"
    version="1.1"
-   viewBox="0 0 106.01941 85.86304"
-   height="324.51968"
-   width="400.70078">
+   id="svg8">
   <defs
      id="defs2" />
-  <sodipodi:namedview
-     inkscape:window-maximized="0"
-     inkscape:window-y="52"
-     inkscape:window-x="2670"
-     inkscape:window-height="2052"
-     inkscape:window-width="2430"
-     inkscape:guide-bbox="true"
-     showguides="true"
-     units="px"
-     showgrid="false"
-     inkscape:document-rotation="0"
-     inkscape:current-layer="layer1"
-     inkscape:document-units="mm"
-     inkscape:cy="183.48535"
-     inkscape:cx="179.74127"
-     inkscape:zoom="3.3722946"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     borderopacity="1.0"
-     bordercolor="#666666"
-     pagecolor="#ffffff"
-     id="base" />
   <metadata
      id="metadata5">
     <rdf:RDF>
@@ -51,86 +25,87 @@
     </rdf:RDF>
   </metadata>
   <g
-     id="layer1"
-     inkscape:groupmode="layer"
-     inkscape:label="Layer 1">
+     transform="translate(118.30497,118.86583)"
+     id="layer1">
     <text
-       id="text838"
-       y="-269.43527"
-       x="-295.86472"
+       xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:10.5833px;font-family:sans-serif;fill:#cbe3e7;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       xml:space="preserve"><tspan
-         style="fill:#cbe3e7;fill-opacity:1;stroke-width:0.264583"
-         y="-269.43527"
-         x="-295.86472"
+       x="-295.86472"
+       y="-269.43527"
+       id="text838"><tspan
          id="tspan836"
-         sodipodi:role="line">EMBARK</tspan></text>
-    <rect
-       y="-0.019731933"
-       x="0.015707012"
-       height="85.859535"
-       width="106.22561"
-       id="rect840"
-       style="fill:#1e1c31;fill-opacity:1;stroke-width:0.237833" />
+         x="-295.86472"
+         y="-269.43527"
+         style="fill:#cbe3e7;fill-opacity:1;stroke-width:0.264583">EMBARK</tspan></text>
     <g
-       transform="translate(-1.1760373e-7,-9.9206519)"
-       id="g976">
-      <text
-         xml:space="preserve"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9334px;font-family:Elianto;-inkscape-font-specification:'Elianto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cbe3e7;fill-opacity:1;stroke:none;stroke-width:7.66505;stroke-miterlimit:4;stroke-dasharray:none"
-         x="16.29842"
-         y="56.908863"
-         id="text860"><tspan
-           sodipodi:role="line"
-           id="tspan858"
+       transform="matrix(2.9166704,0,0,2.8162284,-118.35078,-118.81026)"
+       id="g127">
+      <rect
+         y="-0.019731933"
+         x="0.015707012"
+         height="85.859535"
+         width="106.22561"
+         id="rect840"
+         style="fill:#1e1c31;fill-opacity:1;stroke-width:0.237833" />
+      <g
+         transform="translate(-1.1760373e-7,-9.9206519)"
+         id="g976">
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9334px;font-family:Elianto;-inkscape-font-specification:'Elianto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cbe3e7;fill-opacity:1;stroke:none;stroke-width:7.66505;stroke-miterlimit:4;stroke-dasharray:none"
            x="16.29842"
            y="56.908863"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9334px;font-family:Elianto;-inkscape-font-specification:'Elianto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cbe3e7;fill-opacity:1;stroke-width:7.66505;stroke-miterlimit:4;stroke-dasharray:none">EMBARK</tspan></text>
-      <g
-         id="g965"
-         transform="matrix(1.2845178,0,0,1,-12.546958,0)">
-        <rect
-           style="fill:#f48fb1;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none"
-           id="rect866"
-           width="9.3333893"
-           height="1.6510104"
-           x="23.128325"
-           y="59.513683" />
-        <rect
-           style="fill:#a1efd3;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none"
-           id="rect868"
-           width="9.3333893"
-           height="1.6510104"
-           x="32.461697"
-           y="59.513683" />
-        <rect
-           style="fill:#ffe6b3;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none"
-           id="rect870"
-           width="9.3333893"
-           height="1.6510104"
-           x="41.795078"
-           y="59.513683" />
-        <rect
-           style="fill:#91ddff;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none"
-           id="rect874"
-           width="9.3333893"
-           height="1.6510104"
-           x="51.128498"
-           y="59.513683" />
-        <rect
-           style="fill:#d4bfff;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none"
-           id="rect876"
-           width="9.3333893"
-           height="1.6510104"
-           x="60.461853"
-           y="59.513683" />
-        <rect
-           style="fill:#87dfeb;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none"
-           id="rect878"
-           width="9.3333893"
-           height="1.6510104"
-           x="69.795288"
-           y="59.513683" />
+           id="text860"><tspan
+             id="tspan858"
+             x="16.29842"
+             y="56.908863"
+             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9334px;font-family:Elianto;-inkscape-font-specification:'Elianto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cbe3e7;fill-opacity:1;stroke-width:7.66505;stroke-miterlimit:4;stroke-dasharray:none">EMBARK</tspan></text>
+        <g
+           id="g965"
+           transform="matrix(1.2845178,0,0,1,-12.546958,0)">
+          <rect
+             style="fill:#f48fb1;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none"
+             id="rect866"
+             width="9.3333893"
+             height="1.6510104"
+             x="23.128325"
+             y="59.513683" />
+          <rect
+             style="fill:#a1efd3;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none"
+             id="rect868"
+             width="9.3333893"
+             height="1.6510104"
+             x="32.461697"
+             y="59.513683" />
+          <rect
+             style="fill:#ffe6b3;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none"
+             id="rect870"
+             width="9.3333893"
+             height="1.6510104"
+             x="41.795078"
+             y="59.513683" />
+          <rect
+             style="fill:#91ddff;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none"
+             id="rect874"
+             width="9.3333893"
+             height="1.6510104"
+             x="51.128498"
+             y="59.513683" />
+          <rect
+             style="fill:#d4bfff;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none"
+             id="rect876"
+             width="9.3333893"
+             height="1.6510104"
+             x="60.461853"
+             y="59.513683" />
+          <rect
+             style="fill:#87dfeb;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none"
+             id="rect878"
+             width="9.3333893"
+             height="1.6510104"
+             x="69.795288"
+             y="59.513683" />
+        </g>
       </g>
     </g>
   </g>
