@@ -1,4 +1,4 @@
-<p align="center"><img style="width: 100%" src="./Embark.svg" alt="Embark Logo"/></p>
+<p align="center"><img style="width: 100%;" src="./Embark.svg" alt="Embark Logo"/></p>
 
 
 ## Getting Started
