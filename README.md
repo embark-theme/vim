@@ -1,5 +1,10 @@
 <p align="center"><img src="Embark.svg" alt="Embark Logo"/></p>
 
+<p align="center"><strong>An ambitious Vim theme.</strong></p>
+
+<p align="center"><em>"Man cannot discover new oceans unless he has the courage to lose sight of the shore. - Andre Gide"</em></p>
+
+![embark screenshot](./embark-screenshot.png)
 
 ## Getting Started
 
@@ -24,8 +29,6 @@ let g:lightline = {
       \ 'colorscheme': 'embark',
       \ }
 ```
-
-![embark screenshot](./embark-screenshot.png)
 
 ## Configuration
 
