@@ -1,4 +1,4 @@
-![embark logo](./Embark.svg)
+<p align="center"><img src="./Embark.svg" alt="Embark Logo"/></p>
 
 
 ## Getting Started
