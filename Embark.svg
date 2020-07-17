@@ -5,11 +5,11 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   width="1170.9851"
-   height="913.88428"
-   viewBox="0 0 309.82507 241.80007"
+   id="svg8"
    version="1.1"
-   id="svg8">
+   viewBox="0 0 309.82507 241.80007"
+   height="913.88428"
+   width="1170.9851">
   <defs
      id="defs2" />
   <metadata
@@ -25,88 +25,89 @@
     </rdf:RDF>
   </metadata>
   <g
-     transform="translate(118.30497,118.86583)"
-     id="layer1">
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:10.5833px;font-family:sans-serif;fill:#cbe3e7;fill-opacity:1;stroke:none;stroke-width:0.264583"
-       x="-295.86472"
-       y="-269.43527"
-       id="text838"><tspan
-         id="tspan836"
-         x="-295.86472"
-         y="-269.43527"
-         style="fill:#cbe3e7;fill-opacity:1;stroke-width:0.264583">EMBARK</tspan></text>
+     transform="matrix(2.9166704,0,0,2.8162284,-0.20478743,-0.03121816)"
+     id="g127">
+    <rect
+       y="0.011085097"
+       x="0.070212744"
+       height="85.859535"
+       width="106.22561"
+       id="rect840"
+       style="fill:#1e1c31;fill-opacity:1;stroke-width:0.237833" />
     <g
-       transform="matrix(2.9166704,0,0,2.8162284,-118.35078,-118.81026)"
-       id="g127">
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9334px;font-family:Elianto;-inkscape-font-specification:'Elianto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cbe3e7;fill-opacity:1;stroke:none;stroke-width:7.66509;stroke-miterlimit:4;stroke-dasharray:none"
+       id="text860"
+       aria-label="EMBARK">
+      <path
+         id="path1284"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9334px;font-family:Elianto;-inkscape-font-specification:'Elianto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cbe3e7;fill-opacity:1;stroke-width:7.66509;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 26.529899,34.606846 v 2.099742 h -7.213628 v 4.605884 h 4.809085 l -0.406401,2.099742 h -4.402684 v 1.507072 h 7.213628 v 2.099742 H 17.21653 v 0 -2.099742 -1.507072 -2.099742 -4.605884 -1.049871 -1.049871 z" />
+      <path
+         id="path1286"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9334px;font-family:Elianto;-inkscape-font-specification:'Elianto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cbe3e7;fill-opacity:1;stroke-width:7.66509;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 30.119751,47.019028 h -1.913474 l 1.557872,-12.412182 3.742282,6.282291 1.998141,3.369747 -1.100671,1.828807 -1.625607,-2.709344 -1.811873,-3.081879 z m 5.757355,-3.369747 -1.10067,-1.84574 4.33495,-7.196695 1.524006,12.412182 h -1.913474 l -0.812804,-6.739493 -1.879607,3.098812 z" />
+      <path
+         id="path1288"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9334px;font-family:Elianto;-inkscape-font-specification:'Elianto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cbe3e7;fill-opacity:1;stroke-width:7.66509;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 49.694731,39.602199 q 0.592669,0.169334 1.083738,0.524935 0.508002,0.338668 0.863603,0.812803 0.372535,0.474136 0.575736,1.066805 0.203201,0.575735 0.203201,1.219204 0,0.79587 -0.304802,1.490139 -0.287867,0.677336 -0.812803,1.202272 -0.508002,0.508002 -1.202271,0.812803 -0.677336,0.287868 -1.456272,0.287868 H 42.294836 V 34.606846 h 5.486421 q 0.592669,0 1.100671,0.237068 0.524936,0.220134 0.914404,0.609602 0.389468,0.389468 0.609602,0.914404 0.237068,0.508002 0.237068,1.100671 0,0.643469 -0.254001,1.202271 -0.254001,0.541869 -0.69427,0.931337 z m -5.317087,-1.117604 h 2.929478 q 0.423335,0 0.711203,-0.287868 0.287868,-0.304801 0.287868,-0.728136 0,-0.406402 -0.287868,-0.69427 -0.287868,-0.304801 -0.711203,-0.304801 h -2.929478 z m 3.776148,6.485491 q 0.389468,0 0.728136,-0.1524 0.355602,-0.152401 0.609603,-0.406402 0.270934,-0.254001 0.423334,-0.592669 0.152401,-0.355601 0.152401,-0.745069 0,-0.389468 -0.152401,-0.728136 -0.1524,-0.355602 -0.423334,-0.609603 -0.254001,-0.254001 -0.609603,-0.406401 -0.338668,-0.152401 -0.728136,-0.152401 h -3.793081 v 3.793081 z" />
+      <path
+         id="path1290"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9334px;font-family:Elianto;-inkscape-font-specification:'Elianto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cbe3e7;fill-opacity:1;stroke-width:7.66509;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 60.278091,34.606846 6.197624,12.412182 H 54.063534 Z m 0,4.23335 -3.132679,6.282291 h 6.265358 z" />
+      <path
+         id="path1292"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9334px;font-family:Elianto;-inkscape-font-specification:'Elianto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cbe3e7;fill-opacity:1;stroke-width:7.66509;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 77.787196,39.229664 q 0,0.711203 -0.203201,1.354672 -0.203201,0.643469 -0.575735,1.202271 -0.355602,0.541869 -0.863604,0.982138 -0.508002,0.423334 -1.117604,0.694269 l 2.607743,3.556014 h -2.59081 l -2.336809,-3.183479 h -1.642539 l -0.423335,-2.082808 h 2.540009 q 0.524936,0 0.982138,-0.186268 0.457201,-0.203201 0.795869,-0.541869 0.338668,-0.355601 0.541869,-0.812803 0.203201,-0.457202 0.203201,-0.982137 0,-0.524935 -0.203201,-0.982137 -0.203201,-0.457202 -0.541869,-0.79587 -0.338668,-0.338668 -0.795869,-0.541869 -0.457202,-0.2032 -0.982138,-0.2032 H 70.2857 v 10.31244 h -2.082808 v -10.31244 -1.049871 -1.049871 h 4.978419 q 0.948271,0 1.778007,0.372535 0.84667,0.355601 1.473206,0.982137 0.626536,0.626536 0.982137,1.473206 0.372535,0.829736 0.372535,1.79494 z" />
+      <path
+         id="path1294"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9334px;font-family:Elianto;-inkscape-font-specification:'Elianto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cbe3e7;fill-opacity:1;stroke-width:7.66509;stroke-miterlimit:4;stroke-dasharray:none"
+         d="m 81.935876,43.463014 v 0 l -0.355601,0.474135 v 3.081879 H 79.497467 V 34.606846 h 2.082808 v 5.791223 l 4.28415,-5.791223 h 2.59081 l -4.216416,5.740422 v 0 z m 2.607744,-2.692411 4.605884,6.248425 h -2.59081 l -3.318946,-4.487351 z" />
+    </g>
+    <g
+       transform="matrix(1.2845178,0,0,1,-12.492452,-9.8898349)"
+       id="g965">
       <rect
-         y="-0.019731933"
-         x="0.015707012"
-         height="85.859535"
-         width="106.22561"
-         id="rect840"
-         style="fill:#1e1c31;fill-opacity:1;stroke-width:0.237833" />
-      <g
-         transform="translate(-1.1760373e-7,-9.9206519)"
-         id="g976">
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9334px;font-family:Elianto;-inkscape-font-specification:'Elianto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cbe3e7;fill-opacity:1;stroke:none;stroke-width:7.66505;stroke-miterlimit:4;stroke-dasharray:none"
-           x="16.29842"
-           y="56.908863"
-           id="text860"><tspan
-             id="tspan858"
-             x="16.29842"
-             y="56.908863"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16.9334px;font-family:Elianto;-inkscape-font-specification:'Elianto, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#cbe3e7;fill-opacity:1;stroke-width:7.66505;stroke-miterlimit:4;stroke-dasharray:none">EMBARK</tspan></text>
-        <g
-           id="g965"
-           transform="matrix(1.2845178,0,0,1,-12.546958,0)">
-          <rect
-             style="fill:#f48fb1;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none"
-             id="rect866"
-             width="9.3333893"
-             height="1.6510104"
-             x="23.128325"
-             y="59.513683" />
-          <rect
-             style="fill:#a1efd3;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none"
-             id="rect868"
-             width="9.3333893"
-             height="1.6510104"
-             x="32.461697"
-             y="59.513683" />
-          <rect
-             style="fill:#ffe6b3;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none"
-             id="rect870"
-             width="9.3333893"
-             height="1.6510104"
-             x="41.795078"
-             y="59.513683" />
-          <rect
-             style="fill:#91ddff;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none"
-             id="rect874"
-             width="9.3333893"
-             height="1.6510104"
-             x="51.128498"
-             y="59.513683" />
-          <rect
-             style="fill:#d4bfff;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none"
-             id="rect876"
-             width="9.3333893"
-             height="1.6510104"
-             x="60.461853"
-             y="59.513683" />
-          <rect
-             style="fill:#87dfeb;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none"
-             id="rect878"
-             width="9.3333893"
-             height="1.6510104"
-             x="69.795288"
-             y="59.513683" />
-        </g>
-      </g>
+         y="59.513683"
+         x="23.128325"
+         height="1.6510104"
+         width="9.3333893"
+         id="rect866"
+         style="fill:#f48fb1;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none" />
+      <rect
+         y="59.513683"
+         x="32.461697"
+         height="1.6510104"
+         width="9.3333893"
+         id="rect868"
+         style="fill:#a1efd3;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none" />
+      <rect
+         y="59.513683"
+         x="41.795078"
+         height="1.6510104"
+         width="9.3333893"
+         id="rect870"
+         style="fill:#ffe6b3;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none" />
+      <rect
+         y="59.513683"
+         x="51.128498"
+         height="1.6510104"
+         width="9.3333893"
+         id="rect874"
+         style="fill:#91ddff;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none" />
+      <rect
+         y="59.513683"
+         x="60.461853"
+         height="1.6510104"
+         width="9.3333893"
+         id="rect876"
+         style="fill:#d4bfff;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none" />
+      <rect
+         y="59.513683"
+         x="69.795288"
+         height="1.6510104"
+         width="9.3333893"
+         id="rect878"
+         style="fill:#87dfeb;fill-opacity:1;stroke-width:0.199072;stroke-miterlimit:4;stroke-dasharray:none" />
     </g>
   </g>
 </svg>
