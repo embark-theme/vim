@@ -1,8 +1,5 @@
-# Embark
+![embark logo](./Embark.svg)
 
-An ambitious Vim theme.
-
-![screenshot](embark-screenshot.png)
 
 ## Getting Started
 
@@ -27,6 +24,8 @@ let g:lightline = {
       \ 'colorscheme': 'embark',
       \ }
 ```
+
+![embark screenshot](./embark-screenshot.png)
 
 ## Configuration
 
