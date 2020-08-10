@@ -27,7 +27,7 @@ endif
 " TODO: Cterm values here are OG from Challenger Deep
 let s:space = { "gui": "#1e1c31", "cterm": "233", "cterm16": "NONE"}
 let s:deep_space= { "gui": "#100E23", "cterm": "232", "cterm16": "0"}
-let s:eclipse = { "gui": "#3E3859", "cterm": "236", "cterm16": "8"}
+let s:eclipse = { "gui": "#585273", "cterm": "236", "cterm16": "8"}
 
 let s:stardust = { "gui": "#cbe3e7", "cterm": "253", "cterm16": "7"}
 let s:cosmos = { "gui": "#a6b3cc", "cterm": "252", "cterm16": "15"}
