@@ -325,6 +325,15 @@ call s:h("CtrlpMatch", {"fg": s:yellow})
 call s:h("NERDTreeDir", {"fg": s:blue})
 call s:h("NERDTreeFlags", {"fg": s:green})
 
+" nvim LSP
+call s:h ("LspDiagnosticsError", {"fg": s:red, "bg": s:bg_subtle})
+call s:h ("LspDiagnosticsWarning", {"fg": s:yellow, "bg": s:bg_subtle})
+call s:h ("LspDiagnosticsInformation", {"fg": s:blue, "bg": s:bg_subtle})
+call s:h ("LspDiagnosticsHint", {"fg": s:purple, "bg": s:bg_subtle})
+call s:h ("LspDiagnosticsErrorSign", {"bg": s:bg})
+call s:h ("LspDiagnosticsWarningSign", {"bg": s:bg})
+call s:h ("LspDiagnosticsInformationSign", {"bg": s:bg})
+call s:h ("LspDiagnosticsHintSign", {"bg": s:bg})
 
 " nvim terminal colors
 let g:terminal_color_0 = s:bg_dark.gui
