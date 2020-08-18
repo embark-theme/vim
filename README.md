@@ -10,9 +10,18 @@
 
 > At this time only terminals supporting truecolors will work. Make sure you have `set termguicolors` in your vimrc
 
-First install plugin with your favorite plugin manager.
+First install plugin with your favorite plugin manager. Note you should rename the plugin using your plugin manager's built in facilities to do so.
+
+### vim-plug
 ```
-Plug 'skbolton/embark'
+Plug 'embark-theme/vim', { 'as': 'embark' }
+```
+
+### vim-packager
+```
+...
+call packager#add('embark-theme/vim', { 'name': 'embark' })
+...
 ```
 
 Then set your colorsheme in vim.
