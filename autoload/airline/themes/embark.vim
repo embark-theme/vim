@@ -55,7 +55,7 @@ let g:airline#themes#embark#palette.normal_modified = {
       \ }
 
 let s:I1 = [ s:bg_subtle.gui , s:red.gui , s:bg_subtle.cterm16 , s:red.cterm16]
-let s:I2 = [ s:bg_subtle.gui , s:red.gui , s:bg_subtle.cterm16 , s:red.cterm16]
+let s:I2 = [ s:bg_subtle.gui , s:dark_red.gui , s:bg_subtle.cterm16 , s:dark_red.cterm16]
 let s:I3   = [ s:white.gui, s:bg_subtle.gui, s:white.cterm16, s:bg_subtle.cterm16 ]
 let g:airline#themes#embark#palette.insert = airline#themes#generate_color_map(s:I1, s:I2, s:I3)
 let g:airline#themes#embark#palette.insert_modified = {
