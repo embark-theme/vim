@@ -50,17 +50,7 @@ let s:dark_purple = { "gui": "#a37acc", "cterm": "135", "cterm16": "13"}
 let s:cyan = { "gui": "#87DFEB", "cterm": "122", "cterm16": "6"}
 let s:dark_cyan = { "gui": "#63f2f1", "cterm": "121", "cterm16": "14"}
 
-let s:black           = { "gui": "#2e3440", "cterm": "0", "cterm16" : "8" }
 let s:medium_gray     = { "gui": "#767676", "cterm": "243", "cterm16" : "243" }
-let s:white           = { "gui": "#F3F3F3", "cterm": "15", "cterm16" : "15" }
-let s:actual_white    = { "gui": "#FFFFFF", "cterm": "231", "cterm16" : "231" }
-let s:light_black     = { "gui": "#424242", "cterm": "8", "cterm16" : "0" }
-let s:lighter_black   = { "gui": "#545454", "cterm": "240", "cterm16" : "240" }
-
-" lighter shadows and darker grays
-let s:subtle_black  = { "gui": "#303030", "cterm": "236", "cterm16" : "236" }
-let s:light_gray    = { "gui": "#B2B2B2", "cterm": "249", "cterm16" : "249" }
-let s:lighter_gray  = { "gui": "#C6C6C6", "cterm": "251", "cterm16" : "251" }
 
 let s:bg              = s:space
 let s:bg_subtle       = s:deep_space

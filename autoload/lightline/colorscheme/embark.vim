@@ -1,15 +1,6 @@
 " Colors
-let s:black           = { "gui": "#2e3440", "cterm": "0", "cterm16" : "0" }
 let s:medium_gray     = { "gui": "#767676", "cterm": "243", "cterm16" : "243" }
 let s:white           = { "gui": "#F3F3F3", "cterm": "15", "cterm16" : "15" }
-let s:actual_white    = { "gui": "#FFFFFF", "cterm": "231", "cterm16" : "231" }
-let s:light_black     = { "gui": "#424242", "cterm": "8", "cterm16" : "8" }
-let s:lighter_black   = { "gui": "#545454", "cterm": "240", "cterm16" : "240" }
-
-" lighter shadows and darker grays
-let s:subtle_black  = { "gui": "#303030", "cterm": "236", "cterm16" : "236" }
-let s:light_gray    = { "gui": "#B2B2B2", "cterm": "249", "cterm16" : "249" }
-let s:lighter_gray  = { "gui": "#a6b3cc", "cterm": "251", "cterm16" : "251" }
 
 " challenger deep colors:
 let s:space = { "gui": "#1e1c31", "cterm": "233", "cterm16": "NONE"}
@@ -46,15 +37,8 @@ let s:visual          = s:bg_dark
 
 " lightline challenger deep colors:
 let s:lfc = {
-      \'black': [ s:black.gui, s:black.cterm16],
       \'medium_gray': [ s:medium_gray.gui, s:medium_gray.cterm16],
       \'white': [ s:white.gui, s:white.cterm16],
-      \'actual_white': [ s:actual_white.gui, s:actual_white.cterm16 ],
-      \'light_black': [s:light_black.gui, s:light_black.cterm16],
-      \'lighter_black': [ s:lighter_black.gui, s:lighter_black.cterm16],
-      \'subtle_black': [ s:subtle_black.gui, s:subtle_black.cterm16],
-      \'light_gray': [ s:light_gray.gui, s:light_gray.cterm16],
-      \'lighter_gray': [ s:lighter_gray.gui, s:lighter_gray.cterm16],
       \'space': [s:space.gui, s:space.cterm16],
       \'deep_space': [s:deep_space.gui, s:deep_space.cterm16],
       \'eclipse' : [s:eclipse.gui, s:eclipse.cterm16],
@@ -88,9 +72,9 @@ let s:p.tabline.middle  = [ [ s:lfc.white, s:lfc.bg_subtle ] ]
 let s:p.tabline.right   = [ [ s:lfc.bg_subtle, s:lfc.dark_cyan ] ]
 
 " Normal mode
-let s:p.normal.left     = [ [ s:lfc.bg_subtle, s:lfc.cyan ],  [ s:lfc.lighter_gray, s:lfc.eclipse ] ]
+let s:p.normal.left     = [ [ s:lfc.bg_subtle, s:lfc.cyan ],  [ s:lfc.dark_clouds, s:lfc.eclipse ] ]
 let s:p.normal.middle   = [ [ s:lfc.white, s:lfc.bg_subtle ] ]
-let s:p.normal.right    = [ [ s:lfc.bg_subtle, s:lfc.cyan ],  [ s:lfc.lighter_gray, s:lfc.eclipse ] ]
+let s:p.normal.right    = [ [ s:lfc.bg_subtle, s:lfc.cyan ],  [ s:lfc.dark_clouds, s:lfc.eclipse ] ]
 let s:p.normal.error    = [ [ s:lfc.red, s:lfc.bg_subtle ] ]
 let s:p.normal.warning  = [ [ s:lfc.yellow, s:lfc.bg_subtle ] ]
 
