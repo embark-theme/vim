@@ -1,10 +1,7 @@
 " Colors
-let s:medium_gray     = { "gui": "#767676", "cterm": "243", "cterm16" : "243" }
-let s:white           = { "gui": "#F3F3F3", "cterm": "15", "cterm16" : "15" }
-
 " challenger deep colors:
-let s:space = { "gui": "#1e1c31", "cterm": "233", "cterm16": "NONE"}
 let s:deep_space= { "gui": "#100E23", "cterm": "232", "cterm16": "8"}
+let s:space = { "gui": "#1e1c31", "cterm": "233", "cterm16": "NONE"}
 let s:eclipse = { "gui": "#3E3859", "cterm": "236", "cterm16": "0"}
 
 let s:red = { "gui": "#F48FB1", "cterm": "204", "cterm16": "1"}
@@ -29,16 +26,14 @@ let s:clouds = { "gui": "#cbe3e7", "cterm": "253", "cterm16": "7"}
 let s:dark_clouds = { "gui": "#a6b3cc", "cterm": "252", "cterm16": "15"}
 
 let s:bg              = s:space
-let s:bg_subtle       = s:deep_space
-let s:bg_dark         = s:eclipse
+let s:bg_dark       = s:deep_space
+let s:bg_bright         = s:eclipse
 let s:norm            = s:clouds
 let s:norm_subtle     = s:dark_clouds
-let s:visual          = s:bg_dark
+let s:visual          = s:bg_bright
 
 " lightline challenger deep colors:
 let s:lfc = {
-      \'medium_gray': [ s:medium_gray.gui, s:medium_gray.cterm16],
-      \'white': [ s:white.gui, s:white.cterm16],
       \'space': [s:space.gui, s:space.cterm16],
       \'deep_space': [s:deep_space.gui, s:deep_space.cterm16],
       \'eclipse' : [s:eclipse.gui, s:eclipse.cterm16],
@@ -57,8 +52,8 @@ let s:lfc = {
       \'clouds' : [s:clouds.gui, s:clouds.cterm16],
       \'dark_clouds' : [s:dark_clouds.gui, s:dark_clouds.cterm16],
       \'bg': [s:bg.gui, s:bg.cterm16],
-      \'bg_subtle': [s:bg_subtle.gui, s:bg_subtle.cterm16],
       \'bg_dark': [s:bg_dark.gui, s:bg_dark.cterm16],
+      \'bg_bright': [s:bg_bright.gui, s:bg_bright.cterm16],
       \'norm': [s:norm.gui, s:norm.cterm16],
       \'norm_subtle': [s:norm_subtle.gui, s:norm_subtle.cterm16],
       \}
@@ -66,34 +61,34 @@ let s:lfc = {
 let s:p = { 'normal': {}, 'inactive': {}, 'insert': {}, 'replace': {}, 'visual': {}, 'tabline': {} }
 
 " Tabline
-let s:p.tabline.left    = [ [ s:lfc.white, s:lfc.bg_subtle ], [s:lfc.white, s:lfc.eclipse] ]
-let s:p.tabline.tabsel  = [ [ s:lfc.bg_subtle, s:lfc.dark_cyan ] ]
-let s:p.tabline.middle  = [ [ s:lfc.white, s:lfc.bg_subtle ] ]
-let s:p.tabline.right   = [ [ s:lfc.bg_subtle, s:lfc.dark_cyan ] ]
+let s:p.tabline.left    = [ [ s:lfc.clouds, s:lfc.bg_dark ], [s:lfc.clouds, s:lfc.eclipse] ]
+let s:p.tabline.tabsel  = [ [ s:lfc.bg_dark, s:lfc.dark_cyan ] ]
+let s:p.tabline.middle  = [ [ s:lfc.clouds, s:lfc.bg_dark ] ]
+let s:p.tabline.right   = [ [ s:lfc.bg_dark, s:lfc.dark_cyan ] ]
 
 " Normal mode
-let s:p.normal.left     = [ [ s:lfc.bg_subtle, s:lfc.cyan ],  [ s:lfc.dark_clouds, s:lfc.eclipse ] ]
-let s:p.normal.middle   = [ [ s:lfc.white, s:lfc.bg_subtle ] ]
-let s:p.normal.right    = [ [ s:lfc.bg_subtle, s:lfc.cyan ],  [ s:lfc.dark_clouds, s:lfc.eclipse ] ]
-let s:p.normal.error    = [ [ s:lfc.red, s:lfc.bg_subtle ] ]
-let s:p.normal.warning  = [ [ s:lfc.yellow, s:lfc.bg_subtle ] ]
+let s:p.normal.left     = [ [ s:lfc.bg_dark, s:lfc.cyan ],  [ s:lfc.dark_clouds, s:lfc.eclipse ] ]
+let s:p.normal.middle   = [ [ s:lfc.clouds, s:lfc.bg_dark ] ]
+let s:p.normal.right    = [ [ s:lfc.bg_dark, s:lfc.cyan ],  [ s:lfc.dark_clouds, s:lfc.eclipse ] ]
+let s:p.normal.error    = [ [ s:lfc.red, s:lfc.bg_dark ] ]
+let s:p.normal.warning  = [ [ s:lfc.yellow, s:lfc.bg_dark ] ]
 
 " Visual mode
-let s:p.visual.left     = [ [ s:lfc.bg_subtle, s:lfc.yellow ],  [ s:lfc.bg_subtle, s:lfc.dark_yellow ] ]
-let s:p.visual.right    = [ [ s:lfc.bg_subtle, s:lfc.yellow ],  [ s:lfc.bg_subtle, s:lfc.dark_yellow ] ]
+let s:p.visual.left     = [ [ s:lfc.bg_dark, s:lfc.yellow ],  [ s:lfc.bg_dark, s:lfc.dark_yellow ] ]
+let s:p.visual.right    = [ [ s:lfc.bg_dark, s:lfc.yellow ],  [ s:lfc.bg_dark, s:lfc.dark_yellow ] ]
 
 " Replace mode
-let s:p.replace.left    = [ [ s:lfc.bg_subtle, s:lfc.green ],  [ s:lfc.bg_subtle, s:lfc.dark_green ] ]
-let s:p.replace.right   = [ [ s:lfc.bg_subtle, s:lfc.green ],  [ s:lfc.bg_subtle, s:lfc.dark_green ] ]
+let s:p.replace.left    = [ [ s:lfc.bg_dark, s:lfc.green ],  [ s:lfc.bg_dark, s:lfc.dark_green ] ]
+let s:p.replace.right   = [ [ s:lfc.bg_dark, s:lfc.green ],  [ s:lfc.bg_dark, s:lfc.dark_green ] ]
 
 " Insert mode
-let s:p.insert.left     = [ [ s:lfc.bg_subtle, s:lfc.red ],  [ s:lfc.bg_subtle, s:lfc.dark_red ] ]
-let s:p.insert.right    = [ [ s:lfc.bg_subtle, s:lfc.red ],  [ s:lfc.bg_subtle, s:lfc.dark_red ] ]
+let s:p.insert.left     = [ [ s:lfc.bg_dark, s:lfc.red ],  [ s:lfc.bg_dark, s:lfc.dark_red ] ]
+let s:p.insert.right    = [ [ s:lfc.bg_dark, s:lfc.red ],  [ s:lfc.bg_dark, s:lfc.dark_red ] ]
 
 " Inactive split
-let s:p.inactive.left   = [ [ s:lfc.eclipse, s:lfc.bg_subtle ], [ s:lfc.eclipse, s:lfc.bg_subtle ] ]
-let s:p.inactive.middle = [ [ s:lfc.eclipse, s:lfc.bg_subtle ] ]
-let s:p.inactive.right  = [ [ s:lfc.eclipse, s:lfc.bg_subtle ], [ s:lfc.eclipse, s:lfc.bg_subtle ] ]
+let s:p.inactive.left   = [ [ s:lfc.eclipse, s:lfc.bg_dark ], [ s:lfc.eclipse, s:lfc.bg_dark ] ]
+let s:p.inactive.middle = [ [ s:lfc.eclipse, s:lfc.bg_dark ] ]
+let s:p.inactive.right  = [ [ s:lfc.eclipse, s:lfc.bg_dark ], [ s:lfc.eclipse, s:lfc.bg_dark ] ]
 
 let g:lightline#colorscheme#embark#palette = lightline#colorscheme#flatten(s:p)
 

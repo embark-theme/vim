@@ -25,8 +25,8 @@ endif
 " == COLOR PALETTE == 
 "
 " TODO: Cterm values here are OG from Challenger Deep
-let s:space = { "gui": "#1e1c31", "cterm": "233", "cterm16": "NONE"}
 let s:deep_space= { "gui": "#100E23", "cterm": "232", "cterm16": "0"}
+let s:space = { "gui": "#1e1c31", "cterm": "233", "cterm16": "NONE"}
 let s:eclipse = { "gui": "#585273", "cterm": "236", "cterm16": "8"}
 
 let s:stardust = { "gui": "#cbe3e7", "cterm": "253", "cterm16": "7"}
@@ -53,11 +53,11 @@ let s:dark_cyan = { "gui": "#63f2f1", "cterm": "121", "cterm16": "14"}
 let s:medium_gray     = { "gui": "#767676", "cterm": "243", "cterm16" : "243" }
 
 let s:bg              = s:space
-let s:bg_subtle       = s:deep_space
-let s:bg_dark         = s:eclipse
+let s:bg_dark       = s:deep_space
+let s:bg_bright         = s:eclipse
 let s:norm            = s:stardust
 let s:norm_subtle     = s:cosmos
-let s:visual          = s:bg_dark
+let s:visual          = s:bg_bright
 
 let s:head_a         = s:dark_blue
 let s:head_b         = s:blue
@@ -92,7 +92,7 @@ endfunction
 "
 " (see `:h w18`)
 call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
-call s:h("Cursor",        {"bg": s:blue, "fg": s:bg_dark})
+call s:h("Cursor",        {"bg": s:blue, "fg": s:bg_bright})
 call s:h("Comment",       {"fg": s:medium_gray, "gui": "italic", "cterm": "italic"})
 
 call s:h("Constant",      {"fg": s:yellow})
@@ -136,7 +136,7 @@ hi! link Debug            Special
 
 call s:h("Underlined",    {"fg": s:norm, "gui": "underline", "cterm": "underline"})
 call s:h("Ignore",        {"fg": s:bg})
-call s:h("Error",         {"fg": s:dark_red, "bg": s:bg_subtle , "gui": "bold", "cterm": "bold"})
+call s:h("Error",         {"fg": s:dark_red, "bg": s:bg_dark , "gui": "bold", "cterm": "bold"})
 call s:h("Todo",          {"fg": s:dark_yellow, "bg": s:bg, "gui": "bold", "cterm": "bold"})
 
 " == UI CHROME ==
@@ -146,7 +146,7 @@ call s:h("SpecialKey",    {"fg": s:blue})
 call s:h("Boolean",    {"fg": s:dark_yellow})
 call s:h("Number",    {"fg": s:dark_yellow})
 call s:h("Float",    {"fg": s:dark_yellow})
-call s:h("NonText",       {"fg": s:bg_dark})
+call s:h("NonText",       {"fg": s:bg_bright})
 call s:h("Directory",     {"fg": s:purple})
 call s:h("ErrorMsg",      {"fg": s:dark_red})
 call s:h("IncSearch",     {"bg": s:yellow, "fg": s:space})
@@ -154,19 +154,19 @@ call s:h("Search",        {"bg": s:dark_yellow, "fg": s:space})
 call s:h("MoreMsg",       {"fg": s:medium_gray, "gui": "bold", "cterm": "bold"})
 hi! link ModeMsg MoreMsg
 
-call s:h("LineNr",        {"fg": s:eclipse, "bg": s:bg_subtle})
+call s:h("LineNr",        {"fg": s:eclipse, "bg": s:bg_dark})
 hi LineNr guibg=NONE ctermbg=NONE
 
-call s:h("CursorLineNr",  {"bg": s:bg_subtle, "fg": s:blue, "gui": "bold"})
+call s:h("CursorLineNr",  {"bg": s:bg_dark, "fg": s:blue, "gui": "bold"})
 call s:h("Question",      {"fg": s:red})
-call s:h("StatusLine",    {"bg": s:bg_dark})
+call s:h("StatusLine",    {"bg": s:bg_bright})
 call s:h("Conceal",       {"fg": s:norm})
-call s:h("StatusLineNC",  {"bg": s:bg_dark, "fg": s:medium_gray})
-call s:h("VertSplit",     {"fg": s:bg_subtle})
+call s:h("StatusLineNC",  {"bg": s:bg_bright, "fg": s:medium_gray})
+call s:h("VertSplit",     {"fg": s:bg_dark})
 call s:h("Title",         {"fg": s:dark_blue})
 call s:h("Visual",        {"bg": s:visual})
 call s:h("WarningMsg",    {"fg": s:yellow})
-call s:h("WildMenu",      {"fg": s:bg_subtle, "bg": s:cyan})
+call s:h("WildMenu",      {"fg": s:bg_dark, "bg": s:cyan})
 call s:h("Folded",        {"fg": s:dark_purple})
 call s:h("FoldColumn",    {"fg": s:yellow})
 call s:h("DiffAdd",       {"fg": s:space, "bg": s:dark_green})
@@ -188,14 +188,14 @@ else
 endif
 call s:h("Pmenu",         {"fg": s:norm, "bg": s:deep_space})
 call s:h("PmenuSel",      {"fg": s:purple, "bg": s:space})
-call s:h("PmenuSbar",     {"fg": s:norm, "bg": s:bg_subtle})
-call s:h("PmenuThumb",    {"fg": s:norm, "bg": s:bg_subtle})
-call s:h("TabLine",       {"fg": s:norm, "bg": s:bg_dark})
-call s:h("TabLineSel",    {"fg": s:norm, "bg": s:bg_subtle, "gui": "bold", "cterm": "bold"})
-call s:h("TabLineFill",   {"fg": s:norm, "bg": s:bg_dark})
-call s:h("CursorColumn",  {"bg": s:bg_subtle})
-call s:h("CursorLine",    {"bg": s:bg_subtle})
-call s:h("ColorColumn",   {"bg": s:bg_subtle})
+call s:h("PmenuSbar",     {"fg": s:norm, "bg": s:bg_dark})
+call s:h("PmenuThumb",    {"fg": s:norm, "bg": s:bg_dark})
+call s:h("TabLine",       {"fg": s:norm, "bg": s:bg_bright})
+call s:h("TabLineSel",    {"fg": s:norm, "bg": s:bg_dark, "gui": "bold", "cterm": "bold"})
+call s:h("TabLineFill",   {"fg": s:norm, "bg": s:bg_bright})
+call s:h("CursorColumn",  {"bg": s:bg_dark})
+call s:h("CursorLine",    {"bg": s:bg_dark})
+call s:h("ColorColumn",   {"bg": s:bg_dark})
 
 " == PLUGIN SUPPORT GROUPS ==
 "
@@ -294,7 +294,7 @@ hi! link xmlTag                     htmlTag
 hi! link xmlEndTag                  xmlTag
 hi! link xmlTagName                 htmlTagName
 
-call s:h("MatchParen",    {"bg": s:bg_subtle, "fg": s:purple, "gui": "bold", "cterm": "bold"})
+call s:h("MatchParen",    {"bg": s:bg_dark, "fg": s:purple, "gui": "bold", "cterm": "bold"})
 call s:h("qfLineNr",      {"fg": s:medium_gray})
 
 " Signify, git-gutter
@@ -316,17 +316,17 @@ call s:h("NERDTreeDir", {"fg": s:blue})
 call s:h("NERDTreeFlags", {"fg": s:green})
 
 " nvim LSP
-call s:h ("LspDiagnosticsError", {"fg": s:red, "bg": s:bg_subtle})
-call s:h ("LspDiagnosticsWarning", {"fg": s:yellow, "bg": s:bg_subtle})
-call s:h ("LspDiagnosticsInformation", {"fg": s:blue, "bg": s:bg_subtle})
-call s:h ("LspDiagnosticsHint", {"fg": s:purple, "bg": s:bg_subtle})
+call s:h ("LspDiagnosticsError", {"fg": s:red, "bg": s:bg_dark})
+call s:h ("LspDiagnosticsWarning", {"fg": s:yellow, "bg": s:bg_dark})
+call s:h ("LspDiagnosticsInformation", {"fg": s:blue, "bg": s:bg_dark})
+call s:h ("LspDiagnosticsHint", {"fg": s:purple, "bg": s:bg_dark})
 call s:h ("LspDiagnosticsErrorSign", {"bg": s:bg})
 call s:h ("LspDiagnosticsWarningSign", {"bg": s:bg})
 call s:h ("LspDiagnosticsInformationSign", {"bg": s:bg})
 call s:h ("LspDiagnosticsHintSign", {"bg": s:bg})
 
 " nvim terminal colors
-let g:terminal_color_0 = s:bg_dark.gui
+let g:terminal_color_0 = s:bg_bright.gui
 let g:terminal_color_1 = s:red.gui
 let g:terminal_color_2 = s:green.gui
 let g:terminal_color_3 = s:yellow.gui
@@ -334,7 +334,7 @@ let g:terminal_color_4 = s:blue.gui
 let g:terminal_color_5 = s:purple.gui
 let g:terminal_color_6 = s:cyan.gui
 let g:terminal_color_7 = s:space.gui
-let g:terminal_color_8 = s:bg_subtle.gui
+let g:terminal_color_8 = s:bg_dark.gui
 let g:terminal_color_9 = s:dark_red.gui
 let g:terminal_color_10 = s:dark_green.gui
 let g:terminal_color_11 = s:dark_yellow.gui
