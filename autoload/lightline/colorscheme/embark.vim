@@ -1,5 +1,4 @@
 " Colors
-" challenger deep colors:
 let s:deep_space= { "gui": "#100E23", "cterm": "232", "cterm16": "8"}
 let s:space = { "gui": "#1e1c31", "cterm": "233", "cterm16": "NONE"}
 let s:eclipse = { "gui": "#3E3859", "cterm": "236", "cterm16": "0"}
@@ -32,7 +31,7 @@ let s:norm            = s:clouds
 let s:norm_subtle     = s:dark_clouds
 let s:visual          = s:bg_bright
 
-" lightline challenger deep colors:
+" lightline embark colors
 let s:lfc = {
       \'space': [s:space.gui, s:space.cterm16],
       \'deep_space': [s:deep_space.gui, s:deep_space.cterm16],
