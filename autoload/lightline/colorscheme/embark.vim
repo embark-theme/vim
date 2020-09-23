@@ -22,7 +22,7 @@ let s:cyan = { "gui": "#aaffe4", "cterm": "122", "cterm16": "6"}
 let s:dark_cyan = { "gui": "#63f2f1", "cterm": "121", "cterm16": "14"}
 
 let s:clouds = { "gui": "#cbe3e7", "cterm": "253", "cterm16": "7"}
-let s:dark_clouds = { "gui": "#a6b3cc", "cterm": "252", "cterm16": "15"}
+let s:dark_clouds = { "gui": "#6B697E", "cterm": "252", "cterm16": "15"}
 
 let s:bg              = s:space
 let s:bg_dark       = s:deep_space
@@ -66,9 +66,9 @@ let s:p.tabline.middle  = [ [ s:lfc.clouds, s:lfc.bg_dark ] ]
 let s:p.tabline.right   = [ [ s:lfc.bg_dark, s:lfc.dark_cyan ] ]
 
 " Normal mode
-let s:p.normal.left     = [ [ s:lfc.bg_dark, s:lfc.cyan ],  [ s:lfc.dark_clouds, s:lfc.eclipse ] ]
+let s:p.normal.left     = [ [ s:lfc.bg_dark, s:lfc.cyan ],  [ s:lfc.clouds, s:lfc.eclipse ] ]
 let s:p.normal.middle   = [ [ s:lfc.clouds, s:lfc.bg_dark ] ]
-let s:p.normal.right    = [ [ s:lfc.bg_dark, s:lfc.cyan ],  [ s:lfc.dark_clouds, s:lfc.eclipse ] ]
+let s:p.normal.right    = [ [ s:lfc.bg_dark, s:lfc.cyan ],  [ s:lfc.clouds, s:lfc.eclipse ] ]
 let s:p.normal.error    = [ [ s:lfc.red, s:lfc.bg_dark ] ]
 let s:p.normal.warning  = [ [ s:lfc.yellow, s:lfc.bg_dark ] ]
 
