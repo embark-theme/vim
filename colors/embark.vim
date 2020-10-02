@@ -72,9 +72,6 @@ let s:head_c         = s:dark_cyan
 " shamelessly stolen from hemisu: https://github.com/noahfrederick/vim-hemisu/
 function! s:h(group, style)
   " Not all terminals support italics properly. If yours does, opt-in.
-  if g:embark_terminal_italics == 0 && has_key(a:style, "cterm") && a:style["cterm"] == "italic"
-    unlet a:style.cterm
-  endif
   if g:embark_termcolors == 16
     let l:ctermfg = (has_key(a:style, "fg") ? a:style.fg.cterm16 : "NONE")
     let l:ctermbg = (has_key(a:style, "bg") ? a:style.bg.cterm16 : "NONE")
@@ -92,12 +89,33 @@ function! s:h(group, style)
     \ "cterm="   (has_key(a:style, "cterm") ? a:style.cterm    : "NONE")
 endfunction
 
+function! s:maybe_italic(style)
+  " Are italics turned on
+  if g:embark_terminal_italics == 1
+    " if there are other styles than italics concat
+    if empty(a:style)
+      return s:maybe_italic("")
+    else
+      return a:style . ",italic"
+    endif
+  else
+    " If the only style would have been italics set to none
+    if empty(a:style)
+      return "NONE"
+    else
+      " Otherwise return other styles
+      return a:style
+    endif
+  endif
+
+endfunction
+
 " == COMMON GROUPS ==
 "
 " (see `:h w18`)
 call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
 call s:h("Cursor",        {"bg": s:blue, "fg": s:bg_bright})
-call s:h("Comment",       {"fg": s:norm_subtle, "gui": "italic", "cterm": "italic"})
+call s:h("Comment",       {"fg": s:norm_subtle, "gui": s:maybe_italic(""), "cterm": s:maybe_italic("")})
 
 call s:h("Constant",      {"fg": s:yellow})
 hi! link String           Constant
@@ -216,34 +234,34 @@ hi! link htmlTagName      KeyWord
 hi! link htmlTagN         Keyword
 
 " HTML content
-call s:h("htmlH1",        {"fg": s:head_a, "gui": "bold,italic", "cterm": "bold"     })
+call s:h("htmlH1",        {"fg": s:head_a, "gui": s:maybe_italic("bold"), "cterm": "bold"     })
 call s:h("htmlH2",        {"fg": s:head_a, "gui": "bold"       , "cterm": "bold"     })
-call s:h("htmlH3",        {"fg": s:head_b, "gui": "italic"     , "cterm": "italic"   })
-call s:h("htmlH4",        {"fg": s:head_b, "gui": "italic"     , "cterm": "italic"   })
+call s:h("htmlH3",        {"fg": s:head_b, "gui": s:maybe_italic("")     , "cterm": s:maybe_italic("")   })
+call s:h("htmlH4",        {"fg": s:head_b, "gui": s:maybe_italic("")     , "cterm": s:maybe_italic("")   })
 call s:h("htmlH5",        {"fg": s:head_c                                            })
 call s:h("htmlH6",        {"fg": s:head_c                                            })
 call s:h("htmlLink",      {"fg": s:blue  , "gui": "underline"  , "cterm": "underline"})
-call s:h("htmlItalic",    {                "gui": "italic"     , "cterm": "italic"   })
+call s:h("htmlItalic",    {                "gui": s:maybe_italic("")     , "cterm": s:maybe_italic("")   })
 call s:h("htmlBold",      {                "gui": "bold"       , "cterm": "bold"     })
-call s:h("htmlBoldItalic",{                "gui": "bold,italic", "cterm": "bold"     })
+call s:h("htmlBoldItalic",{                "gui": s:maybe_italic("bold"), "cterm": "bold"     })
 " hi htmlString     guifg=#87875f guibg=NONE gui=NONE        ctermfg=101 ctermbg=NONE cterm=NONE
 
 " tpope/vim-markdown
 call s:h("markdownBlockquote",          {"fg": s:norm})
 call s:h("markdownBold",                {"fg": s:norm  , "gui": "bold"       , "cterm": "bold"  })
-call s:h("markdownBoldItalic",          {"fg": s:norm  , "gui": "bold,italic", "cterm": "bold"  })
+call s:h("markdownBoldItalic",          {"fg": s:norm  , "gui": s:maybe_italic("bold"), "cterm": "bold"  })
 call s:h("markdownEscape",              {"fg": s:norm})
-call s:h("markdownH1",                  {"fg": s:head_a, "gui": "bold,italic", "cterm": "bold"  })
+call s:h("markdownH1",                  {"fg": s:head_a, "gui": s:maybe_italic("bold"), "cterm": "bold"  })
 call s:h("markdownH2",                  {"fg": s:head_a, "gui": "bold"       , "cterm": "bold"  })
-call s:h("markdownH3",                  {"fg": s:head_a, "gui": "italic"     , "cterm": "italic"})
-call s:h("markdownH4",                  {"fg": s:head_a, "gui": "italic"     , "cterm": "italic"})
+call s:h("markdownH3",                  {"fg": s:head_a, "gui": s:maybe_italic("")     , "cterm": s:maybe_italic("")})
+call s:h("markdownH4",                  {"fg": s:head_a, "gui": s:maybe_italic("")     , "cterm": s:maybe_italic("")})
 call s:h("mckarkdownH5",                  {"fg": s:head_a})
 call s:h("markdownH6",                  {"fg": s:head_a})
 call s:h("markdownHeadingDelimiter",    {"fg": s:norm})
 call s:h("markdownHeadingRule",         {"fg": s:norm})
 call s:h("markdownId",                  {"fg": s:norm_subtle})
 call s:h("markdownIdDeclaration",       {"fg": s:norm_subtle})
-call s:h("markdownItalic",              {"fg": s:norm  , "gui": "italic"     , "cterm": "italic"})
+call s:h("markdownItalic",              {"fg": s:norm  , "gui": s:maybe_italic("")     , "cterm": s:maybe_italic("")})
 call s:h("markdownLinkDelimiter",       {"fg": s:norm_subtle})
 call s:h("markdownLinkText",            {"fg": s:norm})
 call s:h("markdownLinkTextDelimiter",   {"fg": s:norm_subtle})
