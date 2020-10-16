@@ -94,7 +94,7 @@ function! s:maybe_italic(style)
   if g:embark_terminal_italics == 1
     " if there are other styles than italics concat
     if empty(a:style)
-      return s:maybe_italic("")
+      return "italic"
     else
       return a:style . ",italic"
     endif
