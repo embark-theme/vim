@@ -337,7 +337,7 @@ call s:h("CtrlpMatch", {"fg": s:yellow})
 call s:h("NERDTreeDir", {"fg": s:blue})
 call s:h("NERDTreeFlags", {"fg": s:green})
 
-" nvim LSP
+" nvim LSP (legacy, kept here for retro-compatibility)
 call s:h ("LspDiagnosticsError", {"fg": s:red, "bg": s:bg_dark})
 call s:h ("LspDiagnosticsWarning", {"fg": s:yellow, "bg": s:bg_dark})
 call s:h ("LspDiagnosticsInformation", {"fg": s:blue, "bg": s:bg_dark})
@@ -346,6 +346,21 @@ call s:h ("LspDiagnosticsErrorSign", {"bg": s:bg})
 call s:h ("LspDiagnosticsWarningSign", {"bg": s:bg})
 call s:h ("LspDiagnosticsInformationSign", {"bg": s:bg})
 call s:h ("LspDiagnosticsHintSign", {"bg": s:bg})
+
+" nvim LSP (updated version for neovim master 35325ddac)
+call s:h ("LspDiagnosticsDefaultError", {"fg": s:red, "bg": s:bg_dark})
+call s:h ("LspDiagnosticsDefaultWarning", {"fg": s:yellow, "bg": s:bg_dark})
+call s:h ("LspDiagnosticsDefaultInformation", {"fg": s:blue, "bg": s:bg_dark})
+call s:h ("LspDiagnosticsDefaultHint", {"fg": s:purple, "bg": s:bg_dark})
+call s:h ("LspDiagnosticsSignError", {"bg": s:bg})
+call s:h ("LspDiagnosticsSignWarning", {"bg": s:bg})
+call s:h ("LspDiagnosticsSignInformation", {"bg": s:bg})
+call s:h ("LspDiagnosticsSignHint", {"bg": s:bg})
+call s:h ("LspDiagnosticsUnderlineError", {"cterm": "undercurl", "gui": "undercurl"})
+call s:h ("LspDiagnosticsFloatingError", {"bg": s:space2, "fg": s:red})
+call s:h ("LspDiagnosticsFloatingWarning", {"bg": s:space2, "fg": s:yellow})
+call s:h ("LspDiagnosticsFloatingInformation", {"bg": s:space2, "fg": s:blue})
+call s:h ("LspDiagnosticsFloatingHint", {"bg": s:space2, "fg": s:purple})
 
 " nvim terminal colors
 let g:terminal_color_0 = s:bg_bright.gui
