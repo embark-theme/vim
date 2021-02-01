@@ -362,6 +362,12 @@ call s:h ("LspDiagnosticsFloatingWarning", {"bg": s:space2, "fg": s:yellow})
 call s:h ("LspDiagnosticsFloatingInformation", {"bg": s:space2, "fg": s:blue})
 call s:h ("LspDiagnosticsFloatingHint", {"bg": s:space2, "fg": s:purple})
 
+" Telescope support
+call s:h("telescopeSelection", {"fg": s:astral1, "bg": s:space3})
+call s:h("TelescopeBorder", {"fg": s:astral0})
+call s:h("TelescopeMatching", {"fg": s:yellow})
+call s:h("TelescopeNormal", {"fg": s:astral0})
+
 " nvim terminal colors
 let g:terminal_color_0 = s:bg_bright.gui
 let g:terminal_color_1 = s:red.gui
