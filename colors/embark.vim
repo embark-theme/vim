@@ -368,6 +368,11 @@ call s:h("TelescopeBorder", {"fg": s:astral0})
 call s:h("TelescopeMatching", {"fg": s:yellow})
 call s:h("TelescopeNormal", {"fg": s:astral0})
 
+" Nvim-tree support
+call s:h("NvimTreeFolderIcon", {"fg": s:purple})
+call s:h("NvimTreeFolderName", {"fg": s:blue})
+call s:h("NvimTreeRootFolder", {"fg": s:green})
+
 " nvim terminal colors
 let g:terminal_color_0 = s:bg_bright.gui
 let g:terminal_color_1 = s:red.gui
