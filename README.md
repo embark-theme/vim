@@ -6,6 +6,8 @@
 
 ![embark screenshot](./embark-screenshot.png)
 
+More screenshots [here](https://github.com/embark-theme/vim/wiki/Screenshots).
+
 ## Getting Started
 
 > At this time only terminals supporting truecolors will work. Make sure you have `set termguicolors` in your vimrc
@@ -51,5 +53,4 @@ Embark offers a few configuration values to control features. Setting values to 
 Italics - Make sure your terminal is set up to handle them. See [this](https://medium.com/@dubistkomisch/how-to-actually-get-italics-and-true-colour-to-work-in-iterm-tmux-vim-9ebe55ebc2be) for help getting italics and true color working in your terminal.
 
 `let g:embark_terminal_italics = 1`
-
 
