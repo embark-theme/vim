@@ -253,6 +253,9 @@ hi! link jsClassKeyword Identifier
 hi! link jsClassDefinition Type
 hi! link jsConditional PreProc
 hi! link jsExtendsKeyword PreProc
+hi! link jsxOpenPunct Operator
+hi! link jsxClosePunct Operator
+hi! link jsxComponentName Identifier
 
 " tpope/vim-markdown
 call s:h("markdownBlockquote",          {"fg": s:norm})
