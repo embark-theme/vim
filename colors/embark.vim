@@ -253,6 +253,8 @@ hi! link jsClassKeyword Identifier
 hi! link jsClassDefinition Type
 hi! link jsConditional PreProc
 hi! link jsExtendsKeyword PreProc
+hi! link jsReturn PreProc
+hi! link jsRepeat PreProc
 call s:h("jsxOpenPunct", {"fg": s:norm_subtle})
 hi! link jsxClosePunct jsxOpenPunct
 
