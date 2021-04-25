@@ -246,6 +246,18 @@ call s:h("htmlBold",      {                "gui": "bold"       , "cterm": "bold"
 call s:h("htmlBoldItalic",{                "gui": s:maybe_italic("bold"), "cterm": "bold"     })
 " hi htmlString     guifg=#87875f guibg=NONE gui=NONE        ctermfg=101 ctermbg=NONE cterm=NONE
 
+" Javascript
+hi! link jsAsyncKeyword  PreProc
+hi! link jsForAwait  PreProc
+hi! link jsClassKeyword Identifier
+hi! link jsClassDefinition Type
+hi! link jsConditional PreProc
+hi! link jsExtendsKeyword PreProc
+hi! link jsReturn PreProc
+hi! link jsRepeat PreProc
+call s:h("jsxOpenPunct", {"fg": s:norm_subtle})
+hi! link jsxClosePunct jsxOpenPunct
+
 " tpope/vim-markdown
 call s:h("markdownBlockquote",          {"fg": s:norm})
 call s:h("markdownBold",                {"fg": s:norm  , "gui": "bold"       , "cterm": "bold"  })
