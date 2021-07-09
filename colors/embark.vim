@@ -403,3 +403,9 @@ let g:terminal_color_13 = s:dark_purple.gui
 let g:terminal_color_14 = s:dark_cyan.gui
 let g:terminal_color_15 = s:norm_subtle.gui
 
+" 256-color terminal colors
+let g:terminal_ansi_colors = [
+    \ s:bg_bright.gui, s:red.gui,         s:green.gui,      s:yellow.gui,
+    \ s:blue.gui,      s:purple.gui,      s:cyan.gui,       s:bg.gui,
+    \ s:bg_bright.gui, s:dark_red.gui,    s:dark_green.gui, s:dark_yellow.gui,
+    \ s:dark_blue.gui, s:dark_purple.gui, s:dark_cyan.gui,  s:norm_subtle.gui]
