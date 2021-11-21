@@ -16,7 +16,7 @@ First install plugin with your favorite plugin manager. Note you should rename t
 
 ### vim-plug
 ```
-Plug 'embark-theme/vim', { 'as': 'embark' }
+Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
 ```
 
 ### vim-packager
