@@ -374,6 +374,27 @@ call s:h ("LspDiagnosticsFloatingWarning", {"bg": s:space2, "fg": s:yellow})
 call s:h ("LspDiagnosticsFloatingInformation", {"bg": s:space2, "fg": s:blue})
 call s:h ("LspDiagnosticsFloatingHint", {"bg": s:space2, "fg": s:purple})
 
+" nvim 0.6.0 (Moved LSP Highlights to Diagnostic Highlights)
+" SEVERITY - Info, Warn, Error, Hint
+" TYPE - Sign, Underline, Float, Virtual Text
+"
+" Highlights
+" Diagnostic[SEVERITY]
+" Diagnostic[TYPE][SEVERITY]
+hi! link DiagnosticError                LspDiagnosticsDefaultError 
+hi! link DiagnosticWarn                 LspDiagnosticsDefaultWarning
+hi! link DiagnosticInfo                 LspDiagnosticsDefaultInformation
+hi! link DiagnosticHint                 LspDiagnosticsDefaultHint
+hi! link DiagnosticSignError            LspDiagnosticsSignError
+hi! link DiagnosticSignWarning          LspDiagnosticsSignWarning
+hi! link DiagnosticSignInfo             LspDiagnosticsSignInformation
+hi! link DiagnosticSignHint             LspDiagnosticsSignHint
+hi! link DiagnosticUnderlineError       LspDiagnosticsUnderlineError
+hi! link DiagnosticFloatingError        LspDiagnosticsFloatingError
+hi! link DiagnosticFloatingWarning      LspDiagnosticsFloatingWarning
+hi! link DiagnosticFloatingInfo         LspDiagnosticsFloatingInformation
+hi! link DiagnosticFloatingHint         LspDiagnosticsFloatingHint
+
 " Telescope support
 call s:h("telescopeSelection", {"fg": s:astral1, "bg": s:space3})
 call s:h("TelescopeBorder", {"fg": s:astral0})
