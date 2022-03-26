@@ -349,41 +349,33 @@ call s:h("CtrlpMatch", {"fg": s:yellow})
 call s:h("NERDTreeDir", {"fg": s:blue})
 call s:h("NERDTreeFlags", {"fg": s:green})
 
-" nvim LSP (updated version for neovim master 35325ddac)
-call s:h ("LspDiagnosticsDefaultError", {"fg": s:red, "bg": s:bg_dark})
-call s:h ("LspDiagnosticsDefaultWarning", {"fg": s:yellow, "bg": s:bg_dark})
-call s:h ("LspDiagnosticsDefaultInformation", {"fg": s:blue, "bg": s:bg_dark})
-call s:h ("LspDiagnosticsDefaultHint", {"fg": s:purple, "bg": s:bg_dark})
-call s:h ("LspDiagnosticsSignError", {"bg": s:bg})
-call s:h ("LspDiagnosticsSignWarning", {"bg": s:bg})
-call s:h ("LspDiagnosticsSignInformation", {"bg": s:bg})
-call s:h ("LspDiagnosticsSignHint", {"bg": s:bg})
-call s:h ("LspDiagnosticsUnderlineError", {"cterm": "undercurl", "gui": "undercurl"})
-call s:h ("LspDiagnosticsFloatingError", {"bg": s:space2, "fg": s:red})
-call s:h ("LspDiagnosticsFloatingWarning", {"bg": s:space2, "fg": s:yellow})
-call s:h ("LspDiagnosticsFloatingInformation", {"bg": s:space2, "fg": s:blue})
-call s:h ("LspDiagnosticsFloatingHint", {"bg": s:space2, "fg": s:purple})
-
-" nvim 0.6.0 (Moved LSP Highlights to Diagnostic Highlights)
+" Neovim Diagnostics
 " SEVERITY - Info, Warn, Error, Hint
 " TYPE - Sign, Underline, Float, Virtual Text
 "
 " Highlights
 " Diagnostic[SEVERITY]
 " Diagnostic[TYPE][SEVERITY]
-hi! link DiagnosticError                LspDiagnosticsDefaultError 
-hi! link DiagnosticWarn                 LspDiagnosticsDefaultWarning
-hi! link DiagnosticInfo                 LspDiagnosticsDefaultInformation
-hi! link DiagnosticHint                 LspDiagnosticsDefaultHint
-hi! link DiagnosticSignError            LspDiagnosticsSignError
-hi! link DiagnosticSignWarning          LspDiagnosticsSignWarning
-hi! link DiagnosticSignInfo             LspDiagnosticsSignInformation
-hi! link DiagnosticSignHint             LspDiagnosticsSignHint
-hi! link DiagnosticUnderlineError       LspDiagnosticsUnderlineError
-hi! link DiagnosticFloatingError        LspDiagnosticsFloatingError
-hi! link DiagnosticFloatingWarning      LspDiagnosticsFloatingWarning
-hi! link DiagnosticFloatingInfo         LspDiagnosticsFloatingInformation
-hi! link DiagnosticFloatingHint         LspDiagnosticsFloatingHint
+"
+" Default Diagnostic highlights
+" Dark background for virtual text
+call s:h("DiagnosticHint", { "fg": s:purple, "bg": s:bg_dark })
+call s:h("DiagnosticInfo", { "fg": s:blue, "bg": s:bg_dark })
+call s:h("DiagnosticWarn", { "fg": s:yellow, "bg": s:bg_dark })
+call s:h("DiagnosticError", { "fg": s:red, "bg": s:bg_dark })
+" For signs and floating menus drop the dark background
+call s:h("DiagnosticSignHint", { "fg": s:purple })
+call s:h("DiagnosticSignWarn", { "fg": s:yellow })
+call s:h("DiagnosticSignInfo", { "fg": s:blue })
+call s:h("DiagnosticSignError", { "fg": s:red })
+hi link DiagnosticFloatingHint DiagnosticSignHint
+hi link DiagnosticFloatingInfo DiagnosticSignInfo
+hi link DiagnosticFloatingWarn DiagnosticSignWarn
+hi link DiagnosticFloatingError DiagnosticSignError
+call s:h("DiagnosticUnderlineHint", {"cterm": "undercurl", "gui": "undercurl", "fg": s:purple})
+call s:h("DiagnosticUnderlineInfo", {"cterm": "undercurl", "gui": "undercurl", "fg": s:blue})
+call s:h("DiagnosticUnderlineWarn", {"cterm": "undercurl", "gui": "undercurl", "fg": s:yellow})
+call s:h("DiagnosticUnderlineError", {"cterm": "undercurl", "gui": "undercurl", "fg": s:red})
 
 " Telescope support
 call s:h("telescopeSelection", {"fg": s:astral1, "bg": s:space3})
