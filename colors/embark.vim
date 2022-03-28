@@ -382,6 +382,10 @@ call s:h("telescopeSelection", {"fg": s:astral1, "bg": s:space3})
 call s:h("TelescopeBorder", {"fg": s:astral0})
 call s:h("TelescopeMatching", {"fg": s:yellow})
 call s:h("TelescopeNormal", {"fg": s:astral0})
+hi link TelescopeResultsDiffAdd GitGutterAdd
+hi link TelescopeResultsDiffChange GitGutterChange
+hi link TelescopeResultsDiffDelete GitGutterDelete
+hi link TelescopeResultsDiffUntracked Title
 
 " Nvim-tree support
 call s:h("NvimTreeFolderIcon", {"fg": s:purple})
