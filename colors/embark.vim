@@ -126,7 +126,7 @@ hi! link Boolean          Constant
 hi! link Float            Constant
 
 call s:h("Identifier",    {"fg": s:purple})
-hi! link Function         Keyword
+call s:h("Function",      {"fg": s:red})
 
 call s:h("Label",        {"fg": s:dark_blue})
 hi! link Conditonal       Statement
@@ -141,7 +141,7 @@ hi! link Define           PreProc
 hi! link Macro            PreProc
 hi! link PreCondit        PreProc
 
-call s:h("Keyword",       {"fg": s:red})
+call s:h("Keyword",       {"fg": s:green})
 hi! link Statement        Keyword
 
 call s:h("Type",          {"fg": s:blue})
@@ -391,6 +391,11 @@ hi link TelescopeResultsDiffUntracked Title
 call s:h("NvimTreeFolderIcon", {"fg": s:purple})
 call s:h("NvimTreeFolderName", {"fg": s:blue})
 call s:h("NvimTreeRootFolder", {"fg": s:green})
+
+" nvim-cmp support
+hi link CmpItemMenu Comment
+hi link CmpItemKindDefault Identifier
+hi link CmpItemAbbrMatch Pmenu
 
 " nvim terminal colors
 let g:terminal_color_0 = s:bg_bright.gui
