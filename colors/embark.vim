@@ -396,6 +396,15 @@ call s:h("NvimTreeRootFolder", {"fg": s:green})
 hi link CmpItemMenu Comment
 hi link CmpItemKindDefault Identifier
 hi link CmpItemAbbrMatch Pmenu
+hi link CmpItemKindDefault Pmenu
+hi link CmpItemKindFunction Function
+hi link CmpItemKindMethod CmpItemKindFunction
+hi link CmpItemKindModule PreProc
+hi link CmpItemKindStruct CmpItemKindModule
+hi link CmpItemKindText Comment
+hi link CmpItemKindSnippet Constant
+hi link CmpItemKindReference Identifier
+hi link CmpItemKindInterface Identifier
 
 " nvim terminal colors
 let g:terminal_color_0 = s:bg_bright.gui
