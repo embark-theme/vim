@@ -67,6 +67,10 @@ let s:head_a         = s:dark_blue
 let s:head_b         = s:blue
 let s:head_c         = s:dark_cyan
 
+let s:diff_del = { "gui": "#301E30", "cterm": "203", "cterm16": "9"}
+let s:diff_add = { "gui": "#133246", "cterm": "119", "cterm16": "10"}
+let s:diff_changed = { "gui": "#211f42", "cterm": "215", "cterm16": "11"}
+
 " == UTILS AND HELPERS == 
 "
 " shamelessly stolen from hemisu: https://github.com/noahfrederick/vim-hemisu/
@@ -191,11 +195,20 @@ call s:h("WarningMsg",    {"fg": s:yellow})
 call s:h("WildMenu",      {"fg": s:bg_dark, "bg": s:cyan})
 call s:h("Folded",        {"fg": s:dark_purple})
 call s:h("FoldColumn",    {"fg": s:yellow})
-call s:h("DiffAdd",       {"fg": s:bg, "bg": s:dark_green})
-call s:h("DiffDelete",    {"fg": s:bg, "bg": s:red})
-call s:h("DiffChange",    {"fg": s:bg, "bg": s:dark_yellow})
-call s:h("DiffText",      {"fg": s:bg, "bg": s:dark_yellow, "gui": "bold"})
+call s:h("DiffAdd",       {"bg": s:diff_add})
+call s:h("DiffDelete",    {"fg": s:visual, "bg": s:diff_del})
+call s:h("DiffChange",    {"bg": s:diff_changed})
+call s:h("DiffText",      {"bg": s:diff_changed, "gui": "underdash"})
 call s:h("SignColumn",    {"fg": s:green})
+
+call s:h("diffAdded",     {"fg": s:green})
+call s:h("diffRemoved",   {"fg": s:red})
+call s:h("diffFile",      {"fg": s:purple})
+call s:h("diffIndexLine", {"fg": s:purple})
+call s:h("diffOldFile",   {"fg": s:blue})
+call s:h("diffNewFile",   {"fg": s:blue})
+call s:h("diffLine",      {"fg": s:purple})
+call s:h("diffSubname",   {"fg": s:norm})
 
 if has("gui_running")
   call s:h("SpellBad",    {"gui": "underline", "sp": s:dark_red})
@@ -430,3 +443,4 @@ let g:terminal_ansi_colors = [
     \ s:blue.gui,      s:purple.gui,      s:cyan.gui,       s:bg.gui,
     \ s:bg_bright.gui, s:dark_red.gui,    s:dark_green.gui, s:dark_yellow.gui,
     \ s:dark_blue.gui, s:dark_purple.gui, s:dark_cyan.gui,  s:norm_subtle.gui]
+
