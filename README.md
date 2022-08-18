@@ -12,30 +12,49 @@ More screenshots [here](https://github.com/embark-theme/vim/wiki/Screenshots).
 
 > At this time only terminals supporting truecolors will work. Make sure you have `set termguicolors` in your vimrc
 
-First install plugin with your favorite plugin manager. Note you should rename the plugin using your plugin manager's built in facilities to do so.
+First install using your plugin manager. Rename package to embark using your plugin manager's built in facilities to do so.
+
+### packer.nvim
+```lua
+use { 'embark-theme/vim', as = 'embark' }
+```
 
 ### vim-plug
-```
+```vim
 Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
 ```
 
-### vim-packager
-```
-...
-call packager#add('embark-theme/vim', { 'name': 'embark' })
-...
+Then set embark as colorsheme.
+
+Vimscript
+
+```vim
+colorscheme embark
 ```
 
-Then set your colorsheme in vim.
+Lua for neovim
+
+```lua
+vim.cmd('colorsheme embark')
 ```
-colorscheme embark
+
+For packer users the colorsheme can be placed in the config callback.
+
+```lua
+use {
+  'embark-theme/vim',
+  as = 'embark',
+  config = function()
+    vim.cmd('colorsheme embark')
+  end
+}
 ```
 
 ### Lightline support
 
 A lightline theme is also available. Just set your colorscheme to embark.
 
-```
+```vim
 let g:lightline = {
       \ 'colorscheme': 'embark',
       \ }
