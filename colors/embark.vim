@@ -391,10 +391,13 @@ call s:h("DiagnosticUnderlineWarn", {"cterm": "undercurl", "gui": "undercurl", "
 call s:h("DiagnosticUnderlineError", {"cterm": "undercurl", "gui": "undercurl", "fg": s:red})
 
 " Telescope support
-call s:h("telescopeSelection", {"fg": s:astral1, "bg": s:space3})
-call s:h("TelescopeBorder", {"fg": s:astral0})
-call s:h("TelescopeMatching", {"fg": s:yellow})
 call s:h("TelescopeNormal", {"fg": s:astral0})
+hi link TelescopeBorder LineNr
+call s:h("TelescopeSelection", {"bg": s:visual, "fg": s:astral1})
+hi link TelescopeMatching Constant
+call s:h("TelescopePreviewTitle", {"fg": s:space0, "bg": s:purple})
+call s:h("TelescopePromptTitle", {"fg": s:space0, "bg": s:green})
+hi link TelescopePromptPrefix Type
 hi link TelescopeResultsDiffAdd GitGutterAdd
 hi link TelescopeResultsDiffChange GitGutterChange
 hi link TelescopeResultsDiffDelete GitGutterDelete
