@@ -397,6 +397,7 @@ call s:h("TelescopeSelection", {"bg": s:visual, "fg": s:astral1})
 hi link TelescopeMatching Constant
 call s:h("TelescopePreviewTitle", {"fg": s:space0, "bg": s:purple})
 call s:h("TelescopePromptTitle", {"fg": s:space0, "bg": s:green})
+hi link TelescopePromptNormal Normal
 call s:h("TelescopeResultsTitle", {"fg": s:space0, "bg": s:blue})
 hi link TelescopePromptPrefix Type
 hi link TelescopeResultsDiffAdd GitGutterAdd
