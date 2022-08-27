@@ -198,7 +198,7 @@ call s:h("FoldColumn",    {"fg": s:yellow})
 call s:h("DiffAdd",       {"bg": s:diff_add})
 call s:h("DiffDelete",    {"fg": s:visual, "bg": s:diff_del})
 call s:h("DiffChange",    {"bg": s:diff_changed})
-call s:h("DiffText",      {"bg": s:diff_changed, "gui": "underdash"})
+call s:h("DiffText",      {"bg": s:diff_changed, "gui": "underline"})
 call s:h("SignColumn",    {"fg": s:green})
 
 call s:h("diffAdded",     {"fg": s:green})
