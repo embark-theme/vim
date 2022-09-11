@@ -22,7 +22,7 @@ use { 'embark-theme/vim', as = 'embark' }
 Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
 ```
 
-Then set embark as colorsheme.
+Then set embark as colorscheme.
 
 Vimscript
 
@@ -33,17 +33,17 @@ colorscheme embark
 Lua for neovim
 
 ```lua
-vim.cmd('colorsheme embark')
+vim.cmd('colorscheme embark')
 ```
 
-For packer users the colorsheme can be placed in the config callback.
+For packer users the colorscheme can be placed in the config callback.
 
 ```lua
 use {
   'embark-theme/vim',
   as = 'embark',
   config = function()
-    vim.cmd('colorsheme embark')
+    vim.cmd('colorscheme embark')
   end
 }
 ```
