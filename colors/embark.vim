@@ -180,9 +180,7 @@ call s:h("Search",        {"bg": s:dark_yellow, "fg": s:bg})
 call s:h("MoreMsg",       {"fg": s:norm_subtle, "gui": "bold", "cterm": "bold"})
 hi! link ModeMsg MoreMsg
 
-call s:h("LineNr",        {"fg": s:space4, "bg": s:bg_dark})
-hi LineNr guibg=NONE ctermbg=NONE
-
+call s:h("LineNr",        {"fg": s:space4})
 call s:h("CursorLineNr",  {"bg": s:bg_dark, "fg": s:blue, "gui": "bold"})
 call s:h("Question",      {"fg": s:red})
 call s:h("StatusLine",    {"bg": s:bg, "fg": s:norm})
