@@ -132,8 +132,7 @@ call s:h("Boolean",    {"fg": s:dark_yellow})
 call s:h("Float",    {"fg": s:dark_yellow})
 
 " * Identifier any variable name
-" TODO: I don't think purple is the long term value I want here
-call s:h("Identifier",    {"fg": s:purple})
+hi! link Identifier Normal
 "   Function function name (also: methods for classes)
 call s:h("Function",      {"fg": s:red})
 
@@ -358,7 +357,7 @@ call s:h("htmlBoldItalic",{                "gui": s:maybe_italic("bold"), "cterm
 " Javascript
 hi! link jsAsyncKeyword  PreProc
 hi! link jsForAwait  PreProc
-hi! link jsClassKeyword Identifier
+call s:h("jsClassKeyword", {"fg": s:purple})
 hi! link jsClassDefinition Type
 hi! link jsConditional PreProc
 hi! link jsExtendsKeyword PreProc
@@ -366,6 +365,9 @@ hi! link jsReturn PreProc
 hi! link jsRepeat PreProc
 call s:h("jsxOpenPunct", {"fg": s:norm_subtle})
 hi! link jsxClosePunct jsxOpenPunct
+
+" Elixir
+call s:h("elixirVariable", {"fg": s:purple})
 
 " tpope/vim-markdown
 call s:h("markdownBlockquote",          {"fg": s:norm})
@@ -471,7 +473,7 @@ call s:h("NERDTreeFlags", {"fg": s:green})
 call s:h("TelescopeNormal", {"fg": s:astral0})
 hi link TelescopeBorder LineNr
 call s:h("TelescopeSelection", {"bg": s:visual, "fg": s:astral1})
-hi link TelescopeMatching Constant
+hi link TelescopeMatching String
 call s:h("TelescopePreviewTitle", {"fg": s:space0, "bg": s:purple})
 call s:h("TelescopePromptTitle", {"fg": s:space0, "bg": s:green})
 hi link TelescopePromptNormal Normal
@@ -489,7 +491,7 @@ call s:h("NvimTreeRootFolder", {"fg": s:green})
 
 " nvim-cmp support
 hi link CmpItemMenu Comment
-hi link CmpItemKindDefault Identifier
+call s:h("CmpItemKindDefault", {"fg": s:purple})
 hi link CmpItemAbbrMatch Pmenu
 hi link CmpItemKindDefault Pmenu
 hi link CmpItemKindFunction Function
@@ -498,8 +500,8 @@ hi link CmpItemKindModule PreProc
 hi link CmpItemKindStruct CmpItemKindModule
 hi link CmpItemKindText Comment
 hi link CmpItemKindSnippet Constant
-hi link CmpItemKindReference Identifier
-hi link CmpItemKindInterface Identifier
+hi! link CmpItemKindReference CmpItemKindDefault
+hi! link CmpItemKindInterface CmpItemKindDefault
 
 " nvim terminal colors
 let g:terminal_color_0 = s:bg_bright.gui
