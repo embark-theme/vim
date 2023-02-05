@@ -132,8 +132,7 @@ call s:h("Boolean",    {"fg": s:dark_yellow})
 call s:h("Float",    {"fg": s:dark_yellow})
 
 " * Identifier any variable name
-" TODO: I don't think purple is the long term value I want here
-call s:h("Identifier",    {"fg": s:purple})
+hi! link Identifier Normal
 "   Function function name (also: methods for classes)
 call s:h("Function",      {"fg": s:red})
 
@@ -358,7 +357,7 @@ call s:h("htmlBoldItalic",{                "gui": s:maybe_italic("bold"), "cterm
 " Javascript
 hi! link jsAsyncKeyword  PreProc
 hi! link jsForAwait  PreProc
-hi! link jsClassKeyword Identifier
+call s:h("jsClassKeyword", {"fg": s:purple})
 hi! link jsClassDefinition Type
 hi! link jsConditional PreProc
 hi! link jsExtendsKeyword PreProc
@@ -471,7 +470,7 @@ call s:h("NERDTreeFlags", {"fg": s:green})
 call s:h("TelescopeNormal", {"fg": s:astral0})
 hi link TelescopeBorder LineNr
 call s:h("TelescopeSelection", {"bg": s:visual, "fg": s:astral1})
-hi link TelescopeMatching Constant
+hi link TelescopeMatching String
 call s:h("TelescopePreviewTitle", {"fg": s:space0, "bg": s:purple})
 call s:h("TelescopePromptTitle", {"fg": s:space0, "bg": s:green})
 hi link TelescopePromptNormal Normal
