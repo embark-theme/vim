@@ -115,127 +115,224 @@ function! s:maybe_italic(style)
 endfunction
 
 " == COMMON GROUPS ==
+" Generated with `:help E669`
 "
-" (see `:h w18`)
-call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
-call s:h("Cursor",        {"bg": s:blue, "fg": s:bg_bright})
+" Nested descriptions fallback to parent rule
 call s:h("Comment",       {"fg": s:norm_subtle, "gui": s:maybe_italic(""), "cterm": s:maybe_italic("")})
 
+" * Constant any constant
 call s:h("Constant",      {"fg": s:yellow})
-hi! link String           Constant
-hi! link Character        Constant
+"   String  a string constant: "this is a string"
+"   Character a character constant: 'c', '\n'
+"   Number  a number constant: 234, 0xff
+call s:h("Number",    {"fg": s:dark_yellow})
+"   Boolean a boolean constant: TRUE, false
+call s:h("Boolean",    {"fg": s:dark_yellow})
+"   Float  a floating point constant: 2.3e10
+call s:h("Float",    {"fg": s:dark_yellow})
 
-call s:h("Number",       {"fg": s:dark_yellow})
-hi! link Boolean          Constant
-hi! link Float            Constant
-
+" * Identifier any variable name
+" TODO: I don't think purple is the long term value I want here
 call s:h("Identifier",    {"fg": s:purple})
+"   Function function name (also: methods for classes)
 call s:h("Function",      {"fg": s:red})
 
+" * Statement - any statement
+call s:h("Statement",  {"fg": s:green})
+"   Conditional if, then, else, endif, switch, etc.
+"   Repeat  for, do, while, etc.
+"   Label  case, default, etc.
 call s:h("Label",        {"fg": s:dark_blue})
-hi! link Conditonal       Statement
-hi! link Exception        Statement
-
+"   Operator "sizeof", "+", "*", etc.
 call s:h("Operator",     {"fg": s:dark_cyan})
-hi! link Repeat           Operator
-
-call s:h("PreProc",       {"fg": s:green})
-hi! link Include          PreProc
-hi! link Define           PreProc
-hi! link Macro            PreProc
-hi! link PreCondit        PreProc
-
+"   Keyword any other keyword
 call s:h("Keyword",       {"fg": s:green})
-hi! link Statement        Keyword
+"   Exception try, catch, throw
 
+" * PreProc generic Preprocessor
+call s:h("PreProc",       {"fg": s:green})
+"   Include preprocessor #include
+"   Define  preprocessor #define
+"   Macro  same as Define
+"   PreCondit preprocessor #if, #else, #endif, etc.
+
+" * Type  int, long, char, etc.
 call s:h("Type",          {"fg": s:blue})
-hi! link StorageClass     Type
-hi! link Structure        Type
-hi! link Typedef          Type
+"   StorageClass static, register, volatile, etc.
+"   Structure struct, union, enum, etc.
+"   Typedef A typedef
 
+" * Special any special symbol
 call s:h("Special",       {"fg": s:cyan})
-hi! link SpecialChar      Special
-hi! link Tag              Special
-hi! link Delimiter        Special
-hi! link SpecialComment   Special
-hi! link Debug            Special
+"   SpecialChar special character in a constant
+"   Tag  you can use CTRL-] on this
+"   Delimiter character that needs attention
+"   SpecialComment special things inside a comment
+"   Debug  debugging statements
 
+" * Underlined text that stands out, HTML links
 call s:h("Underlined",    {"fg": s:norm, "gui": "underline", "cterm": "underline"})
+
+" * Ignore  left blank, hidden  |hl-Ignore|
 call s:h("Ignore",        {"fg": s:bg})
+
+" * Error  any erroneous construct
 call s:h("Error",         {"fg": s:dark_red, "bg": s:bg_dark , "gui": "bold", "cterm": "bold"})
+
+" * Todo  anything that needs extra attention; mostly the
+"    keywords TODO FIXME and XXX
 call s:h("Todo",          {"fg": s:dark_yellow, "bg": s:bg, "gui": "bold", "cterm": "bold"})
 
+
 " == UI CHROME ==
+" Generated with `:help highlight-default`
 "
-" ordered according to `:help hitest.vim`
-call s:h("SpecialKey",    {"fg": s:blue})
-call s:h("Boolean",    {"fg": s:dark_yellow})
-call s:h("Number",    {"fg": s:dark_yellow})
-call s:h("Float",    {"fg": s:dark_yellow})
-call s:h("NonText",       {"fg": s:bg_bright})
-call s:h("Directory",     {"fg": s:purple})
-call s:h("ErrorMsg",      {"fg": s:dark_red})
-call s:h("IncSearch",     {"bg": s:yellow, "fg": s:bg})
-call s:h("Search",        {"bg": s:dark_yellow, "fg": s:bg})
-call s:h("MoreMsg",       {"fg": s:norm_subtle, "gui": "bold", "cterm": "bold"})
-hi! link ModeMsg MoreMsg
-
-call s:h("LineNr",        {"fg": s:space4})
-call s:h("CursorLineNr",  {"bg": s:bg_dark, "fg": s:blue, "gui": "bold"})
-call s:h("Question",      {"fg": s:red})
-call s:h("StatusLine",    {"bg": s:bg, "fg": s:norm})
-call s:h("Conceal",       {"fg": s:norm})
-call s:h("StatusLineNC",  {"bg": s:bg})
-call s:h("VertSplit",     {"fg": s:bg_dark})
-call s:h("Title",         {"fg": s:dark_blue})
-call s:h("Visual",        {"bg": s:visual})
-call s:h("WarningMsg",    {"fg": s:yellow})
-call s:h("WildMenu",      {"fg": s:bg_dark, "bg": s:cyan})
-call s:h("Folded",        {"fg": s:dark_purple})
-call s:h("FoldColumn",    {"fg": s:yellow})
-call s:h("DiffAdd",       {"bg": s:diff_add})
-call s:h("DiffDelete",    {"fg": s:visual, "bg": s:diff_del})
-call s:h("DiffChange",    {"bg": s:diff_changed})
-call s:h("DiffText",      {"bg": s:diff_changed, "gui": "underline"})
-call s:h("SignColumn",    {"fg": s:green})
-
-call s:h("diffAdded",     {"fg": s:green})
-call s:h("diffRemoved",   {"fg": s:red})
-call s:h("diffFile",      {"fg": s:purple})
-call s:h("diffIndexLine", {"fg": s:purple})
-call s:h("diffOldFile",   {"fg": s:blue})
-call s:h("diffNewFile",   {"fg": s:blue})
-call s:h("diffLine",      {"fg": s:purple})
-call s:h("diffSubname",   {"fg": s:norm})
-
-if has("gui_running")
-  call s:h("SpellBad",    {"gui": "underline", "sp": s:dark_red})
-  call s:h("SpellCap",    {"gui": "underline", "sp": s:green})
-  call s:h("SpellRare",   {"gui": "underline", "sp": s:red})
-  call s:h("SpellLocal",  {"gui": "underline", "sp": s:dark_green})
-else
-  call s:h("SpellBad",    {"cterm": "underline", "fg": s:dark_red})
-  call s:h("SpellCap",    {"cterm": "underline", "fg": s:green})
-  call s:h("SpellRare",   {"cterm": "underline", "fg": s:red})
-  call s:h("SpellLocal",  {"cterm": "underline", "fg": s:dark_green})
-endif
-call s:h("Pmenu",         {"fg": s:norm, "bg": s:space2})
-call s:h("PmenuSel",      {"fg": s:purple, "bg": s:bg})
-call s:h("PmenuSbar",     {"fg": s:norm, "bg": s:bg_dark})
-call s:h("PmenuThumb",    {"fg": s:norm, "bg": s:bg_dark})
-call s:h("TabLine",       {"fg": s:norm_subtle, "bg": s:bg})
-call s:h("TabLineSel",    {"fg": s:norm, "bg": s:visual, "gui": "bold", "cterm": "bold"})
-call s:h("TabLineFill",   {"fg": s:norm_subtle, "bg": s:bg})
-
-call s:h("CursorColumn",  {"bg": s:bg_dark})
-call s:h("CursorLine",    {"bg": s:bg_dark})
+" ColorColumn - Used for the columns set with 'colorcolumn'.
 call s:h("ColorColumn",   {"bg": s:bg_dark})
+" Conceal - Placeholder characters substituted for concealed
+call s:h("Conceal",       {"fg": s:norm})
+" Cursor - Character under the cursor.
+call s:h("Cursor",        {"bg": s:blue, "fg": s:bg_bright})
+" CursorColumn - Screen-column at the cursor, when 'cursorcolumn' is set.
+call s:h("CursorColumn",  {"bg": s:bg_dark})
+" CursorLine - Screen-line at the cursor, when 'cursorline' is set.
+call s:h("CursorLine",    {"bg": s:bg_dark})
+" Directory -Directory names (and other special names in listings).
+call s:h("Directory",     {"fg": s:purple})
+" DiffAdd - Diff mode: Added line. |diff.txt|
+call s:h("DiffAdd",       {"bg": s:diff_add})
+" DiffChange - Diff mode: Changed line. |diff.txt|
+call s:h("DiffChange",    {"bg": s:diff_changed})
+" DiffDelete - Diff mode: Deleted line. |diff.txt|
+call s:h("DiffDelete",    {"fg": s:visual, "bg": s:diff_del})
+" DiffText - Diff mode: Changed text within a changed line. |diff.txt|
+call s:h("DiffText",      {"bg": s:diff_changed, "gui": "underline"})
+" EndOfBuffer	Filler lines (~) after the end of the buffer.
+" ErrorMsg - Error messages on the command line.
+call s:h("ErrorMsg",      {"fg": s:dark_red})
+" WinSeparator - Separators between window splits.
+call s:h("WinSeparator",     {"fg": s:bg_dark})
+" Folded - Line used for closed folds.
+call s:h("Folded",        {"fg": s:dark_purple})
+" FoldColumn - 'foldcolumn'
+" TODO: This shouldn't be yellow
+call s:h("FoldColumn",    {"fg": s:yellow})
+" SignColumn - Column where |signs| are displayed.
+call s:h("SignColumn",    {"fg": s:green})
+" IncSearch - 'incsearch' highlighting; also used for the text replaced with
+call s:h("IncSearch",     {"bg": s:yellow, "fg": s:bg})
+" Substitute - |:substitute| replacement text highlighting.
+" LineNr -Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
+call s:h("LineNr",        {"fg": s:space4})
+" CursorLineNr - Like LineNr when 'cursorline' is set and 'cursorlineopt'
+call s:h("CursorLineNr",  {"bg": s:bg_dark, "fg": s:blue, "gui": "bold"})
+" CursorLineFold - Like FoldColumn when 'cursorline' is set for the cursor line.
+" MatchParen - Character under the cursor or just before it, if it
+call s:h("MatchParen",    {"bg": s:bg_dark, "fg": s:purple, "gui": "bold", "cterm": "bold"})
+" ModeMsg - 'showmode' message (e.g., "-- INSERT --").
+call s:h("ModeMsg",       {"fg": s:norm_subtle, "gui": "bold", "cterm": "bold"})
+" MsgArea - Area for messages and cmdline.
+" MoreMsg - |more-prompt|
+hi! link MoreMsg ModeMsg
+" NonText - '@' at the end of the window, characters from 'showbreak'
+call s:h("NonText",       {"fg": s:bg_bright})
+" Normal - Normal text.
+call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
+" NormalFloat - Normal text in floating windows.
+" Pmenu - Popup menu: Normal item.
+call s:h("Pmenu",         {"fg": s:norm, "bg": s:space2})
+" PmenuSel - Popup menu: Selected item.
+call s:h("PmenuSel",      {"fg": s:purple, "bg": s:bg})
+" PmenuSbar - Popup menu: Scrollbar.
+call s:h("PmenuSbar",     {"fg": s:norm, "bg": s:bg_dark})
+" PmenuThumb - Popup menu: Thumb of the scrollbar.
+call s:h("PmenuThumb",    {"fg": s:norm, "bg": s:bg_dark})
+" Question - |hit-enter| prompt and yes/no questions.
+" TODO: red is the wrong choice here
+call s:h("Question",      {"fg": s:red})
+" QuickFixLine - Current |quickfix| item in the quickfix window. Combined with
+" TODO: This might be worth looking into
+" Search - Last search pattern highlighting (see 'hlsearch').
+call s:h("Search",        {"bg": s:dark_yellow, "fg": s:bg})
+" SpecialKey - Unprintable chars: Text displayed differently from what it is
+call s:h("SpecialKey",    {"fg": s:blue})
+" SpellBad Word that is not recognized by the spellchecker. |spell|
+if has("gui_running")
+" SpellBad Word that is not recognized by the spellchecker. |spell|
+  call s:h("SpellBad",    {"gui": "underline", "sp": s:dark_red})
+" SpellCap - Word that should start with a capital. |spell|
+  call s:h("SpellCap",    {"gui": "underline", "sp": s:green})
+" SpellLocal - Word that is recognized by the spellchecker as one that is
+  call s:h("SpellLocal",  {"gui": "underline", "sp": s:dark_green})
+" SpellRare - Word that is recognized by the spellchecker as one that is
+  call s:h("SpellRare",   {"gui": "underline", "sp": s:red})
+else
+" SpellBad Word that is not recognized by the spellchecker. |spell|
+  call s:h("SpellBad",    {"cterm": "underline", "fg": s:dark_red})
+" SpellCap - Word that should start with a capital. |spell|
+  call s:h("SpellCap",    {"cterm": "underline", "fg": s:green})
+" SpellLocal - Word that is recognized by the spellchecker as one that is
+  call s:h("SpellLocal",  {"cterm": "underline", "fg": s:dark_green})
+" SpellRare - Word that is recognized by the spellchecker as one that is
+  call s:h("SpellRare",   {"cterm": "underline", "fg": s:red})
+" SpellLocal - Word that is recognized by the spellchecker as one that is
+  call s:h("SpellLocal",  {"gui": "underline", "sp": s:dark_green})
+endif
+" StatusLine - Status line of current window.
+call s:h("StatusLine",    {"bg": s:bg, "fg": s:norm})
+" StatusLineNC - Status lines of not-current windows.
+call s:h("StatusLineNC",  {"bg": s:bg})
+" TabLine - Tab pages line, not active tab page label.
+call s:h("TabLine",       {"fg": s:norm_subtle, "bg": s:bg})
+" TabLineFill - Tab pages line, where there are no labels.
+call s:h("TabLineFill",   {"fg": s:norm_subtle, "bg": s:bg})
+" TabLineSel Tab pages line, active tab page label.
+call s:h("TabLineSel",    {"fg": s:norm, "bg": s:visual, "gui": "bold", "cterm": "bold"})
+" Title - Titles for output from ":set all", ":autocmd" etc.
+call s:h("Title",         {"fg": s:dark_blue})
+" Visual - Visual mode selection.
+call s:h("Visual",        {"bg": s:visual})
+" VisualNOS - Visual mode selection when vim is "Not Owning the Selection".
+" WarningMsg - Warning messages.
+call s:h("WarningMsg",    {"fg": s:yellow})
+" Whitespace - "nbsp", "space", "tab", "multispace", "lead" and "trail"
+" WildMenu - Current match in 'wildmenu' completion.
+call s:h("WildMenu",      {"fg": s:bg_dark, "bg": s:cyan})
+" WinBar - Window bar of current window.
+" WinBarNC - Window bar of not-current windows.
+
+" Neovim Diagnostics
+" SEVERITY - Info, Warn, Error, Hint
+" TYPE - Sign, Underline, Float, Virtual Text
+"
+" Highlights
+" Diagnostic[SEVERITY]
+" Diagnostic[TYPE][SEVERITY]
+"
+" Default Diagnostic highlights
+" Dark background for virtual text
+call s:h("DiagnosticHint", { "fg": s:purple, "bg": s:bg_dark })
+call s:h("DiagnosticInfo", { "fg": s:blue, "bg": s:bg_dark })
+call s:h("DiagnosticWarn", { "fg": s:yellow, "bg": s:bg_dark })
+call s:h("DiagnosticError", { "fg": s:red, "bg": s:bg_dark })
+" For signs and floating menus drop the dark background
+call s:h("DiagnosticSignHint", { "fg": s:purple })
+call s:h("DiagnosticSignWarn", { "fg": s:yellow })
+call s:h("DiagnosticSignInfo", { "fg": s:blue })
+call s:h("DiagnosticSignError", { "fg": s:red })
+hi link DiagnosticFloatingHint DiagnosticSignHint
+hi link DiagnosticFloatingInfo DiagnosticSignInfo
+hi link DiagnosticFloatingWarn DiagnosticSignWarn
+hi link DiagnosticFloatingError DiagnosticSignError
+call s:h("DiagnosticUnderlineHint", {"cterm": "undercurl", "gui": "undercurl", "fg": s:purple})
+call s:h("DiagnosticUnderlineInfo", {"cterm": "undercurl", "gui": "undercurl", "fg": s:blue})
+call s:h("DiagnosticUnderlineWarn", {"cterm": "undercurl", "gui": "undercurl", "fg": s:yellow})
+call s:h("DiagnosticUnderlineError", {"cterm": "undercurl", "gui": "undercurl", "fg": s:red})
 
 " == PLUGIN SUPPORT GROUPS ==
 "
 " vim-sneak
 hi link Sneak Search
-
 
 " HTML syntax
 hi! link htmlTag          Special
@@ -340,7 +437,6 @@ hi! link xmlTag                     htmlTag
 hi! link xmlEndTag                  xmlTag
 hi! link xmlTagName                 htmlTagName
 
-call s:h("MatchParen",    {"bg": s:bg_dark, "fg": s:purple, "gui": "bold", "cterm": "bold"})
 call s:h("qfLineNr",      {"fg": s:norm_subtle})
 
 " Signify, git-gutter
@@ -352,6 +448,16 @@ call s:h("GitGutterDelete",{"fg": s:red, "bg": s:bg})
 call s:h("GitGutterChange",{"fg": s:yellow, "bg": s:bg})
 call s:h("GitGutterChangeDelete",{"fg": s:red, "bg": s:bg})
 
+" Fugitive
+call s:h("diffAdded",     {"fg": s:green})
+call s:h("diffRemoved",   {"fg": s:red})
+call s:h("diffFile",      {"fg": s:purple})
+call s:h("diffIndexLine", {"fg": s:purple})
+call s:h("diffOldFile",   {"fg": s:blue})
+call s:h("diffNewFile",   {"fg": s:blue})
+call s:h("diffLine",      {"fg": s:purple})
+call s:h("diffSubname",   {"fg": s:norm})
+
 " Ale
 call s:h("ALEErrorSign", {"fg": s:red, "bg": s:bg})
 call s:h("ALEWarningSign", {"fg": s:dark_yellow, "bg": s:bg})
@@ -360,34 +466,6 @@ call s:h("ALEVirtualTextWarning", {"fg": s:dark_yellow})
 call s:h("CtrlpMatch", {"fg": s:yellow})
 call s:h("NERDTreeDir", {"fg": s:blue})
 call s:h("NERDTreeFlags", {"fg": s:green})
-
-" Neovim Diagnostics
-" SEVERITY - Info, Warn, Error, Hint
-" TYPE - Sign, Underline, Float, Virtual Text
-"
-" Highlights
-" Diagnostic[SEVERITY]
-" Diagnostic[TYPE][SEVERITY]
-"
-" Default Diagnostic highlights
-" Dark background for virtual text
-call s:h("DiagnosticHint", { "fg": s:purple, "bg": s:bg_dark })
-call s:h("DiagnosticInfo", { "fg": s:blue, "bg": s:bg_dark })
-call s:h("DiagnosticWarn", { "fg": s:yellow, "bg": s:bg_dark })
-call s:h("DiagnosticError", { "fg": s:red, "bg": s:bg_dark })
-" For signs and floating menus drop the dark background
-call s:h("DiagnosticSignHint", { "fg": s:purple })
-call s:h("DiagnosticSignWarn", { "fg": s:yellow })
-call s:h("DiagnosticSignInfo", { "fg": s:blue })
-call s:h("DiagnosticSignError", { "fg": s:red })
-hi link DiagnosticFloatingHint DiagnosticSignHint
-hi link DiagnosticFloatingInfo DiagnosticSignInfo
-hi link DiagnosticFloatingWarn DiagnosticSignWarn
-hi link DiagnosticFloatingError DiagnosticSignError
-call s:h("DiagnosticUnderlineHint", {"cterm": "undercurl", "gui": "undercurl", "fg": s:purple})
-call s:h("DiagnosticUnderlineInfo", {"cterm": "undercurl", "gui": "undercurl", "fg": s:blue})
-call s:h("DiagnosticUnderlineWarn", {"cterm": "undercurl", "gui": "undercurl", "fg": s:yellow})
-call s:h("DiagnosticUnderlineError", {"cterm": "undercurl", "gui": "undercurl", "fg": s:red})
 
 " Telescope support
 call s:h("TelescopeNormal", {"fg": s:astral0})
