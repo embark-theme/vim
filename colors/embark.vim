@@ -121,9 +121,11 @@ endfunction
 call s:h("Comment",       {"fg": s:norm_subtle, "gui": s:maybe_italic(""), "cterm": s:maybe_italic("")})
 
 " * Constant any constant
-call s:h("Constant",      {"fg": s:blue})
+call s:h("Constant",      {"fg": s:purple})
 "   String  a string constant: "this is a string"
 call s:h("String",      {"fg": s:yellow})
+call s:h("@string.special", {"fg": s:dark_blue})
+call s:h("@string.escape", {"fg": s:cyan})
 "   Character a character constant: 'c', '\n'
 call s:h("Character",      {"fg": s:yellow})
 "   Number  a number constant: 234, 0xff
@@ -137,12 +139,14 @@ call s:h("Float",    {"fg": s:dark_yellow})
 hi! link Identifier Normal
 call s:h("@punctuation.bracket", {"fg": s:norm})
 call s:h("@symbol", {"fg": s:yellow})
-call s:h("@constant.builtin", {"fg": s:dark_cyan})
-call s:h("@variable.builtin", {"fg": s:dark_cyan})
-call s:h("@keyword.operator", {"fg": s:dark_cyan})
+call s:h("@constant.builtin", {"fg": s:cyan})
+call s:h("@variable.builtin", {"fg": s:cyan})
+call s:h("@keyword.operator", {"fg": s:cyan})
 call s:h("@constructor", {"fg": s:purple})
 "   Function function name (also: methods for classes)
 call s:h("Function",      {"fg": s:blue})
+call s:h("@function", {"fg": s:red})
+call s:h("@function.call", {"fg": s:blue})
 hi! link @tag Type
 hi! link @tag.delimiter Operator
 hi! link @tag.attribute Constant
@@ -225,7 +229,7 @@ call s:h("WinSeparator",     {"fg": s:bg_dark})
 call s:h("Folded",        {"fg": s:dark_purple})
 " FoldColumn - 'foldcolumn'
 " TODO: This shouldn't be yellow
-call s:h("FoldColumn",    {"fg": s:yellow})
+call s:h("FoldColumn",    {"fg": s:dark_purple})
 " SignColumn - Column where |signs| are displayed.
 call s:h("SignColumn",    {"fg": s:green})
 " IncSearch - 'incsearch' highlighting; also used for the text replaced with
