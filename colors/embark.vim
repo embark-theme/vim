@@ -38,7 +38,7 @@ let s:astral0 = {"gui": "#8A889D", "cterm": "252", "cterm16": "15"}
 let s:astral1 = { "gui": "#cbe3e7", "cterm": "253", "cterm16": "7"}
 
 " Nebula
-let s:red = { "gui": "#F48FB1", "cterm": "204", "cterm16": "1"}
+let s:red = { "gui": "#f6a6cf", "cterm": "204", "cterm16": "1"}
 let s:dark_red = { "gui": "#EF598C", "cterm": "203", "cterm16": "9"}
 
 let s:green = { "gui": "#A1EFD3", "cterm": "120", "cterm16": "2"}
