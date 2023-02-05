@@ -121,9 +121,11 @@ endfunction
 call s:h("Comment",       {"fg": s:norm_subtle, "gui": s:maybe_italic(""), "cterm": s:maybe_italic("")})
 
 " * Constant any constant
-call s:h("Constant",      {"fg": s:yellow})
+call s:h("Constant",      {"fg": s:blue})
 "   String  a string constant: "this is a string"
+call s:h("String",      {"fg": s:yellow})
 "   Character a character constant: 'c', '\n'
+call s:h("Character",      {"fg": s:yellow})
 "   Number  a number constant: 234, 0xff
 call s:h("Number",    {"fg": s:dark_yellow})
 "   Boolean a boolean constant: TRUE, false
@@ -133,9 +135,17 @@ call s:h("Float",    {"fg": s:dark_yellow})
 
 " * Identifier any variable name
 hi! link Identifier Normal
+call s:h("@punctuation.bracket", {"fg": s:norm})
+call s:h("@symbol", {"fg": s:yellow})
+call s:h("@constant.builtin", {"fg": s:dark_cyan})
+call s:h("@variable.builtin", {"fg": s:dark_cyan})
+call s:h("@keyword.operator", {"fg": s:dark_cyan})
+call s:h("@constructor", {"fg": s:purple})
 "   Function function name (also: methods for classes)
-call s:h("Function",      {"fg": s:red})
-
+call s:h("Function",      {"fg": s:blue})
+hi! link @tag Type
+hi! link @tag.delimiter Operator
+hi! link @tag.attribute Constant
 " * Statement - any statement
 call s:h("Statement",  {"fg": s:green})
 "   Conditional if, then, else, endif, switch, etc.
@@ -146,7 +156,7 @@ call s:h("Label",        {"fg": s:dark_blue})
 call s:h("Operator",     {"fg": s:dark_cyan})
 "   Keyword any other keyword
 call s:h("Keyword",       {"fg": s:green})
-"   Exception try, catch, throw
+" Exception try, catch, throw
 
 " * PreProc generic Preprocessor
 call s:h("PreProc",       {"fg": s:green})
@@ -156,7 +166,7 @@ call s:h("PreProc",       {"fg": s:green})
 "   PreCondit preprocessor #if, #else, #endif, etc.
 
 " * Type  int, long, char, etc.
-call s:h("Type",          {"fg": s:blue})
+call s:h("Type",          {"fg": s:purple})
 "   StorageClass static, register, volatile, etc.
 "   Structure struct, union, enum, etc.
 "   Typedef A typedef
