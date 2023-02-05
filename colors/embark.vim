@@ -39,21 +39,21 @@ let s:astral1 = { "gui": "#cbe3e7", "cterm": "253", "cterm16": "7"}
 
 " Nebula
 let s:red = { "gui": "#F48FB1", "cterm": "204", "cterm16": "1"}
-let s:dark_red = { "gui": "#F02E6E", "cterm": "203", "cterm16": "9"}
+let s:dark_red = { "gui": "#EF598C", "cterm": "203", "cterm16": "9"}
 
 let s:green = { "gui": "#A1EFD3", "cterm": "120", "cterm16": "2"}
-let s:dark_green = { "gui": "#62d196", "cterm": "119", "cterm16": "10"}
+let s:dark_green = { "gui": "#7fe9c3", "cterm": "119", "cterm16": "10"}
 
 let s:yellow = { "gui": "#ffe6b3", "cterm": "228", "cterm16": "3"}
 let s:dark_yellow = { "gui": "#F2B482", "cterm": "215", "cterm16": "11"}
 
 let s:blue = { "gui": "#91ddff", "cterm": "159", "cterm16": "4"}
-let s:dark_blue = { "gui": "#65b2ff", "cterm": "75", "cterm16": "12"}
+let s:dark_blue = { "gui": "#78a8ff", "cterm": "135", "cterm16": "13"}
 
 let s:purple = { "gui": "#d4bfff", "cterm": "141", "cterm16": "5"}
-let s:dark_purple = { "gui": "#a37acc", "cterm": "135", "cterm16": "13"}
+let s:dark_purple = { "gui": "#7676ff", "cterm": "75", "cterm16": "12"}
 
-let s:cyan = { "gui": "#87DFEB", "cterm": "122", "cterm16": "6"}
+let s:cyan = { "gui": "#ABF8F7", "cterm": "122", "cterm16": "6"}
 let s:dark_cyan = { "gui": "#63f2f1", "cterm": "121", "cterm16": "14"}
 
 let s:bg              = s:space1
@@ -192,14 +192,14 @@ call s:h("Visual",        {"bg": s:visual})
 call s:h("WarningMsg",    {"fg": s:yellow})
 call s:h("WildMenu",      {"fg": s:bg_dark, "bg": s:cyan})
 call s:h("Folded",        {"fg": s:dark_purple})
-call s:h("FoldColumn",    {"fg": s:yellow})
+call s:h("FoldColumn",    {"fg": s:dark_purple})
 call s:h("DiffAdd",       {"bg": s:diff_add})
 call s:h("DiffDelete",    {"fg": s:visual, "bg": s:diff_del})
 call s:h("DiffChange",    {"bg": s:diff_changed})
 call s:h("DiffText",      {"bg": s:diff_changed, "gui": "underline"})
 call s:h("SignColumn",    {"fg": s:green})
 
-call s:h("diffAdded",     {"fg": s:green})
+call s:h("diffAdded",     {"fg": s:dark_green})
 call s:h("diffRemoved",   {"fg": s:red})
 call s:h("diffFile",      {"fg": s:purple})
 call s:h("diffIndexLine", {"fg": s:purple})
