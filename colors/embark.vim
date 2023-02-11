@@ -134,6 +134,11 @@ call s:h("Number",    {"fg": s:dark_yellow})
 call s:h("Boolean",    {"fg": s:dark_yellow})
 "   Float  a floating point constant: 2.3e10
 call s:h("Float",    {"fg": s:dark_yellow})
+call s:h("@text.literal", {"fg": s:cyan})
+call s:h("@text.uri", {"fg": s:blue})
+call s:h("@text.reference", {"fg": s:purple})
+call s:h("@text.strong", {"gui": "bold"})
+call s:h("@text.emphasis", {"gui": s:maybe_italic("")})
 
 " * Identifier any variable name
 hi! link Identifier Normal
