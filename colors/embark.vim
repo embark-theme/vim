@@ -139,6 +139,8 @@ call s:h("@text.uri", {"fg": s:blue})
 call s:h("@text.reference", {"fg": s:purple})
 call s:h("@text.strong", {"gui": "bold"})
 call s:h("@text.emphasis", {"gui": s:maybe_italic("")})
+call s:h("@text.todo.unchecked", {"fg": s:dark_cyan, "gui": "bold"})
+call s:h("@text.todo.checked", {"fg": s:norm_subtle})
 
 " * Identifier any variable name
 hi! link Identifier Normal
