@@ -124,8 +124,6 @@ call s:h("Comment",       {"fg": s:norm_subtle, "gui": s:maybe_italic(""), "cter
 call s:h("Constant",      {"fg": s:purple})
 "   String  a string constant: "this is a string"
 call s:h("String",      {"fg": s:yellow})
-call s:h("@string.special", {"fg": s:dark_blue})
-call s:h("@string.escape", {"fg": s:cyan})
 "   Character a character constant: 'c', '\n'
 call s:h("Character",      {"fg": s:yellow})
 "   Number  a number constant: 234, 0xff
@@ -134,29 +132,11 @@ call s:h("Number",    {"fg": s:dark_yellow})
 call s:h("Boolean",    {"fg": s:dark_yellow})
 "   Float  a floating point constant: 2.3e10
 call s:h("Float",    {"fg": s:dark_yellow})
-call s:h("@text.literal", {"fg": s:cyan})
-call s:h("@text.uri", {"fg": s:blue})
-call s:h("@text.reference", {"fg": s:purple})
-call s:h("@text.strong", {"gui": "bold"})
-call s:h("@text.emphasis", {"gui": s:maybe_italic("")})
-call s:h("@text.todo.unchecked", {"fg": s:dark_cyan, "gui": "bold"})
-call s:h("@text.todo.checked", {"fg": s:norm_subtle})
 
 " * Identifier any variable name
 hi! link Identifier Normal
-call s:h("@punctuation.bracket", {"fg": s:norm})
-call s:h("@symbol", {"fg": s:yellow})
-call s:h("@constant.builtin", {"fg": s:cyan})
-call s:h("@variable.builtin", {"fg": s:cyan})
-call s:h("@keyword.operator", {"fg": s:cyan})
-call s:h("@constructor", {"fg": s:purple})
 "   Function function name (also: methods for classes)
 call s:h("Function",      {"fg": s:blue})
-call s:h("@function", {"fg": s:red})
-call s:h("@function.call", {"fg": s:blue})
-hi! link @tag Type
-hi! link @tag.delimiter Operator
-hi! link @tag.attribute Constant
 " * Statement - any statement
 call s:h("Statement",  {"fg": s:green})
 "   Conditional if, then, else, endif, switch, etc.
@@ -321,33 +301,93 @@ call s:h("WildMenu",      {"fg": s:bg_dark, "bg": s:cyan})
 " WinBar - Window bar of current window.
 " WinBarNC - Window bar of not-current windows.
 
-" Neovim Diagnostics
-" SEVERITY - Info, Warn, Error, Hint
-" TYPE - Sign, Underline, Float, Virtual Text
-"
-" Highlights
-" Diagnostic[SEVERITY]
-" Diagnostic[TYPE][SEVERITY]
-"
-" Default Diagnostic highlights
-" Dark background for virtual text
-call s:h("DiagnosticHint", { "fg": s:purple, "bg": s:bg_dark })
-call s:h("DiagnosticInfo", { "fg": s:blue, "bg": s:bg_dark })
-call s:h("DiagnosticWarn", { "fg": s:yellow, "bg": s:bg_dark })
-call s:h("DiagnosticError", { "fg": s:red, "bg": s:bg_dark })
-" For signs and floating menus drop the dark background
-call s:h("DiagnosticSignHint", { "fg": s:purple })
-call s:h("DiagnosticSignWarn", { "fg": s:yellow })
-call s:h("DiagnosticSignInfo", { "fg": s:blue })
-call s:h("DiagnosticSignError", { "fg": s:red })
-hi link DiagnosticFloatingHint DiagnosticSignHint
-hi link DiagnosticFloatingInfo DiagnosticSignInfo
-hi link DiagnosticFloatingWarn DiagnosticSignWarn
-hi link DiagnosticFloatingError DiagnosticSignError
-call s:h("DiagnosticUnderlineHint", {"cterm": "undercurl", "gui": "undercurl", "fg": s:purple})
-call s:h("DiagnosticUnderlineInfo", {"cterm": "undercurl", "gui": "undercurl", "fg": s:blue})
-call s:h("DiagnosticUnderlineWarn", {"cterm": "undercurl", "gui": "undercurl", "fg": s:yellow})
-call s:h("DiagnosticUnderlineError", {"cterm": "undercurl", "gui": "undercurl", "fg": s:red})
+if has('nvim')
+  " Neovim Diagnostics
+  " SEVERITY - Info, Warn, Error, Hint
+  " TYPE - Sign, Underline, Float, Virtual Text
+  "
+  " Highlights
+  " Diagnostic[SEVERITY]
+  " Diagnostic[TYPE][SEVERITY]
+  "
+  " Default Diagnostic highlights
+  " Dark background for virtual text
+  call s:h("DiagnosticHint", { "fg": s:purple, "bg": s:bg_dark })
+  call s:h("DiagnosticInfo", { "fg": s:blue, "bg": s:bg_dark })
+  call s:h("DiagnosticWarn", { "fg": s:yellow, "bg": s:bg_dark })
+  call s:h("DiagnosticError", { "fg": s:red, "bg": s:bg_dark })
+  " For signs and floating menus drop the dark background
+  call s:h("DiagnosticSignHint", { "fg": s:purple })
+  call s:h("DiagnosticSignWarn", { "fg": s:yellow })
+  call s:h("DiagnosticSignInfo", { "fg": s:blue })
+  call s:h("DiagnosticSignError", { "fg": s:red })
+  hi link DiagnosticFloatingHint DiagnosticSignHint
+  hi link DiagnosticFloatingInfo DiagnosticSignInfo
+  hi link DiagnosticFloatingWarn DiagnosticSignWarn
+  hi link DiagnosticFloatingError DiagnosticSignError
+  call s:h("DiagnosticUnderlineHint", {"cterm": "undercurl", "gui": "undercurl", "fg": s:purple})
+  call s:h("DiagnosticUnderlineInfo", {"cterm": "undercurl", "gui": "undercurl", "fg": s:blue})
+  call s:h("DiagnosticUnderlineWarn", {"cterm": "undercurl", "gui": "undercurl", "fg": s:yellow})
+  call s:h("DiagnosticUnderlineError", {"cterm": "undercurl", "gui": "undercurl", "fg": s:red})
+
+  " Telescope support
+  call s:h("TelescopeNormal", {"fg": s:astral0})
+  hi link TelescopeBorder LineNr
+  call s:h("TelescopeSelection", {"bg": s:visual, "fg": s:astral1})
+  hi link TelescopeMatching String
+  call s:h("TelescopePreviewTitle", {"fg": s:space0, "bg": s:purple})
+  call s:h("TelescopePromptTitle", {"fg": s:space0, "bg": s:green})
+  hi link TelescopePromptNormal Normal
+  call s:h("TelescopeResultsTitle", {"fg": s:space0, "bg": s:blue})
+  hi link TelescopePromptPrefix Type
+  hi link TelescopeResultsDiffAdd GitGutterAdd
+  hi link TelescopeResultsDiffChange GitGutterChange
+  hi link TelescopeResultsDiffDelete GitGutterDelete
+  hi link TelescopeResultsDiffUntracked Title
+
+  " Nvim-tree support
+  call s:h("NvimTreeFolderIcon", {"fg": s:purple})
+  call s:h("NvimTreeFolderName", {"fg": s:blue})
+  call s:h("NvimTreeRootFolder", {"fg": s:green})
+
+  " nvim-cmp support
+  hi link CmpItemMenu Comment
+  hi link CmpItemKindDefault Identifier
+  hi link CmpItemAbbrMatch Pmenu
+  hi link CmpItemKindDefault Pmenu
+  hi link CmpItemKindFunction Function
+  hi link CmpItemKindMethod CmpItemKindFunction
+  hi link CmpItemKindModule PreProc
+  hi link CmpItemKindStruct CmpItemKindModule
+  hi link CmpItemKindText Comment
+  hi link CmpItemKindSnippet Constant
+  hi link CmpItemKindReference Identifier
+  hi link CmpItemKindInterface Identifier
+
+  if has('nvim-0.8')
+    " Treesitter support
+    hi! link @constant.builtin Special
+    call s:h("@variable.builtin", {"fg": s:cyan})
+    call s:h("@string.special", {"fg": s:dark_blue})
+    call s:h("@string.escape", {"fg": s:cyan})
+    call s:h("@symbol", {"fg": s:yellow})
+    call s:h("@punctuation.bracket", {"fg": s:norm})
+    call s:h("@keyword.operator", {"fg": s:cyan})
+    call s:h("@function", {"fg": s:red})
+    call s:h("@function.call", {"fg": s:blue})
+    call s:h("@constructor", {"fg": s:purple})
+    hi! link @tag Type
+    hi! link @tag.delimiter Operator
+    hi! link @tag.attribute Constant
+    call s:h("@text.literal", {"fg": s:cyan})
+    call s:h("@text.uri", {"fg": s:blue})
+    call s:h("@text.reference", {"fg": s:purple})
+    call s:h("@text.strong", {"gui": "bold"})
+    call s:h("@text.emphasis", {"gui": s:maybe_italic("")})
+    call s:h("@text.todo.unchecked", {"fg": s:dark_cyan, "gui": "bold"})
+    call s:h("@text.todo.checked", {"fg": s:norm_subtle})
+  endif
+endif
 
 " == PLUGIN SUPPORT GROUPS ==
 "
@@ -486,40 +526,6 @@ call s:h("ALEVirtualTextWarning", {"fg": s:dark_yellow})
 call s:h("CtrlpMatch", {"fg": s:yellow})
 call s:h("NERDTreeDir", {"fg": s:blue})
 call s:h("NERDTreeFlags", {"fg": s:green})
-
-" Telescope support
-call s:h("TelescopeNormal", {"fg": s:astral0})
-hi link TelescopeBorder LineNr
-call s:h("TelescopeSelection", {"bg": s:visual, "fg": s:astral1})
-hi link TelescopeMatching String
-call s:h("TelescopePreviewTitle", {"fg": s:space0, "bg": s:purple})
-call s:h("TelescopePromptTitle", {"fg": s:space0, "bg": s:green})
-hi link TelescopePromptNormal Normal
-call s:h("TelescopeResultsTitle", {"fg": s:space0, "bg": s:blue})
-hi link TelescopePromptPrefix Type
-hi link TelescopeResultsDiffAdd GitGutterAdd
-hi link TelescopeResultsDiffChange GitGutterChange
-hi link TelescopeResultsDiffDelete GitGutterDelete
-hi link TelescopeResultsDiffUntracked Title
-
-" Nvim-tree support
-call s:h("NvimTreeFolderIcon", {"fg": s:purple})
-call s:h("NvimTreeFolderName", {"fg": s:blue})
-call s:h("NvimTreeRootFolder", {"fg": s:green})
-
-" nvim-cmp support
-hi link CmpItemMenu Comment
-hi link CmpItemKindDefault Identifier
-hi link CmpItemAbbrMatch Pmenu
-hi link CmpItemKindDefault Pmenu
-hi link CmpItemKindFunction Function
-hi link CmpItemKindMethod CmpItemKindFunction
-hi link CmpItemKindModule PreProc
-hi link CmpItemKindStruct CmpItemKindModule
-hi link CmpItemKindText Comment
-hi link CmpItemKindSnippet Constant
-hi link CmpItemKindReference Identifier
-hi link CmpItemKindInterface Identifier
 
 " nvim terminal colors
 let g:terminal_color_0 = s:bg_bright.gui
