@@ -366,19 +366,21 @@ if has('nvim')
 
   if has('nvim-0.8')
     " Treesitter support
-    hi! link @constant.builtin Special
-    call s:h("@variable.builtin", {"fg": s:cyan})
+    call s:h("@punctuation.bracket", {"fg": s:norm})
+
     call s:h("@string.special", {"fg": s:dark_blue})
     call s:h("@string.escape", {"fg": s:cyan})
-    call s:h("@symbol", {"fg": s:yellow})
-    call s:h("@punctuation.bracket", {"fg": s:norm})
-    call s:h("@keyword.operator", {"fg": s:cyan})
+
     call s:h("@function", {"fg": s:red})
     call s:h("@function.call", {"fg": s:blue})
     call s:h("@constructor", {"fg": s:purple})
-    hi! link @tag Type
-    hi! link @tag.delimiter Operator
-    hi! link @tag.attribute Constant
+
+    call s:h("@keyword.operator", {"fg": s:cyan})
+
+    hi! link @constant.builtin Special
+    call s:h("@variable.builtin", {"fg": s:cyan})
+    call s:h("@symbol", {"fg": s:yellow})
+
     call s:h("@text.literal", {"fg": s:cyan})
     call s:h("@text.uri", {"fg": s:blue})
     call s:h("@text.reference", {"fg": s:purple})
@@ -386,6 +388,10 @@ if has('nvim')
     call s:h("@text.emphasis", {"gui": s:maybe_italic("")})
     call s:h("@text.todo.unchecked", {"fg": s:dark_cyan, "gui": "bold"})
     call s:h("@text.todo.checked", {"fg": s:norm_subtle})
+
+    hi! link @tag Type
+    hi! link @tag.delimiter Operator
+    hi! link @tag.attribute Constant
   endif
 endif
 
