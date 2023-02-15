@@ -45,8 +45,6 @@ let s:green = { "gui": "#A1EFD3", "cterm": "120", "cterm16": "2"}
 let s:dark_green = { "gui": "#7fe9c3", "cterm": "119", "cterm16": "10"}
 
 let s:yellow = { "gui": "#ffe6b3", "cterm": "228", "cterm16": "3"}
-" let s:yellow2 = { "gui": "#f9dfc9", "cterm": "228", "cterm16": "3"}
-let s:yellow2 = { "gui": "#ffd3b3", "cterm": "228", "cterm16": "3"}
 let s:dark_yellow = { "gui": "#F2B482", "cterm": "215", "cterm16": "11"}
 
 let s:blue = { "gui": "#91ddff", "cterm": "159", "cterm16": "4"}
@@ -125,7 +123,7 @@ call s:h("Comment",       {"fg": s:norm_subtle, "gui": s:maybe_italic(""), "cter
 " * Constant any constant
 call s:h("Constant",      {"fg": s:purple})
 "   String  a string constant: "this is a string"
-call s:h("String",      {"fg": s:yellow2})
+call s:h("String",      {"fg": s:yellow})
 call s:h("@string.special", {"fg": s:dark_blue})
 call s:h("@string.escape", {"fg": s:cyan})
 "   Character a character constant: 'c', '\n'
