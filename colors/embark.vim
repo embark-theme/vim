@@ -42,7 +42,7 @@ let s:red = { "gui": "#F48FB1", "cterm": "204", "cterm16": "1"}
 let s:dark_red = { "gui": "#F02E6E", "cterm": "203", "cterm16": "9"}
 
 let s:green = { "gui": "#A1EFD3", "cterm": "120", "cterm16": "2"}
-let s:dark_green = { "gui": "#62d196", "cterm": "119", "cterm16": "10"}
+let s:dark_green = { "gui": "#7fe9c3", "cterm": "119", "cterm16": "10"}
 
 let s:yellow = { "gui": "#ffe6b3", "cterm": "228", "cterm16": "3"}
 let s:dark_yellow = { "gui": "#F2B482", "cterm": "215", "cterm16": "11"}
