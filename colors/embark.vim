@@ -300,33 +300,69 @@ call s:h("WildMenu",      {"fg": s:bg_dark, "bg": s:cyan})
 " WinBar - Window bar of current window.
 " WinBarNC - Window bar of not-current windows.
 
-" Neovim Diagnostics
-" SEVERITY - Info, Warn, Error, Hint
-" TYPE - Sign, Underline, Float, Virtual Text
-"
-" Highlights
-" Diagnostic[SEVERITY]
-" Diagnostic[TYPE][SEVERITY]
-"
-" Default Diagnostic highlights
-" Dark background for virtual text
-call s:h("DiagnosticHint", { "fg": s:purple, "bg": s:bg_dark })
-call s:h("DiagnosticInfo", { "fg": s:blue, "bg": s:bg_dark })
-call s:h("DiagnosticWarn", { "fg": s:yellow, "bg": s:bg_dark })
-call s:h("DiagnosticError", { "fg": s:red, "bg": s:bg_dark })
-" For signs and floating menus drop the dark background
-call s:h("DiagnosticSignHint", { "fg": s:purple })
-call s:h("DiagnosticSignWarn", { "fg": s:yellow })
-call s:h("DiagnosticSignInfo", { "fg": s:blue })
-call s:h("DiagnosticSignError", { "fg": s:red })
-hi link DiagnosticFloatingHint DiagnosticSignHint
-hi link DiagnosticFloatingInfo DiagnosticSignInfo
-hi link DiagnosticFloatingWarn DiagnosticSignWarn
-hi link DiagnosticFloatingError DiagnosticSignError
-call s:h("DiagnosticUnderlineHint", {"cterm": "undercurl", "gui": "undercurl", "fg": s:purple})
-call s:h("DiagnosticUnderlineInfo", {"cterm": "undercurl", "gui": "undercurl", "fg": s:blue})
-call s:h("DiagnosticUnderlineWarn", {"cterm": "undercurl", "gui": "undercurl", "fg": s:yellow})
-call s:h("DiagnosticUnderlineError", {"cterm": "undercurl", "gui": "undercurl", "fg": s:red})
+if has('nvim')
+  " Neovim Diagnostics
+  " SEVERITY - Info, Warn, Error, Hint
+  " TYPE - Sign, Underline, Float, Virtual Text
+  "
+  " Highlights
+  " Diagnostic[SEVERITY]
+  " Diagnostic[TYPE][SEVERITY]
+  "
+  " Default Diagnostic highlights
+  " Dark background for virtual text
+  call s:h("DiagnosticHint", { "fg": s:purple, "bg": s:bg_dark })
+  call s:h("DiagnosticInfo", { "fg": s:blue, "bg": s:bg_dark })
+  call s:h("DiagnosticWarn", { "fg": s:yellow, "bg": s:bg_dark })
+  call s:h("DiagnosticError", { "fg": s:red, "bg": s:bg_dark })
+  " For signs and floating menus drop the dark background
+  call s:h("DiagnosticSignHint", { "fg": s:purple })
+  call s:h("DiagnosticSignWarn", { "fg": s:yellow })
+  call s:h("DiagnosticSignInfo", { "fg": s:blue })
+  call s:h("DiagnosticSignError", { "fg": s:red })
+  hi link DiagnosticFloatingHint DiagnosticSignHint
+  hi link DiagnosticFloatingInfo DiagnosticSignInfo
+  hi link DiagnosticFloatingWarn DiagnosticSignWarn
+  hi link DiagnosticFloatingError DiagnosticSignError
+  call s:h("DiagnosticUnderlineHint", {"cterm": "undercurl", "gui": "undercurl", "fg": s:purple})
+  call s:h("DiagnosticUnderlineInfo", {"cterm": "undercurl", "gui": "undercurl", "fg": s:blue})
+  call s:h("DiagnosticUnderlineWarn", {"cterm": "undercurl", "gui": "undercurl", "fg": s:yellow})
+  call s:h("DiagnosticUnderlineError", {"cterm": "undercurl", "gui": "undercurl", "fg": s:red})
+
+  " Telescope support
+  call s:h("TelescopeNormal", {"fg": s:astral0})
+  hi link TelescopeBorder LineNr
+  call s:h("TelescopeSelection", {"bg": s:visual, "fg": s:astral1})
+  hi link TelescopeMatching String
+  call s:h("TelescopePreviewTitle", {"fg": s:space0, "bg": s:purple})
+  call s:h("TelescopePromptTitle", {"fg": s:space0, "bg": s:green})
+  hi link TelescopePromptNormal Normal
+  call s:h("TelescopeResultsTitle", {"fg": s:space0, "bg": s:blue})
+  hi link TelescopePromptPrefix Type
+  hi link TelescopeResultsDiffAdd GitGutterAdd
+  hi link TelescopeResultsDiffChange GitGutterChange
+  hi link TelescopeResultsDiffDelete GitGutterDelete
+  hi link TelescopeResultsDiffUntracked Title
+
+  " Nvim-tree support
+  call s:h("NvimTreeFolderIcon", {"fg": s:purple})
+  call s:h("NvimTreeFolderName", {"fg": s:blue})
+  call s:h("NvimTreeRootFolder", {"fg": s:green})
+
+  " nvim-cmp support
+  hi link CmpItemMenu Comment
+  call s:h("CmpItemKindDefault", {"fg": s:purple})
+  hi link CmpItemAbbrMatch Pmenu
+  hi link CmpItemKindDefault Pmenu
+  hi link CmpItemKindFunction Function
+  hi link CmpItemKindMethod CmpItemKindFunction
+  hi link CmpItemKindModule PreProc
+  hi link CmpItemKindStruct CmpItemKindModule
+  hi link CmpItemKindText Comment
+  hi link CmpItemKindSnippet Constant
+  hi! link CmpItemKindReference CmpItemKindDefault
+  hi! link CmpItemKindInterface CmpItemKindDefault
+endif
 
 " == PLUGIN SUPPORT GROUPS ==
 "
@@ -469,41 +505,6 @@ call s:h("CtrlpMatch", {"fg": s:yellow})
 call s:h("NERDTreeDir", {"fg": s:blue})
 call s:h("NERDTreeFlags", {"fg": s:green})
 
-" Telescope support
-call s:h("TelescopeNormal", {"fg": s:astral0})
-hi link TelescopeBorder LineNr
-call s:h("TelescopeSelection", {"bg": s:visual, "fg": s:astral1})
-hi link TelescopeMatching String
-call s:h("TelescopePreviewTitle", {"fg": s:space0, "bg": s:purple})
-call s:h("TelescopePromptTitle", {"fg": s:space0, "bg": s:green})
-hi link TelescopePromptNormal Normal
-call s:h("TelescopeResultsTitle", {"fg": s:space0, "bg": s:blue})
-hi link TelescopePromptPrefix Type
-hi link TelescopeResultsDiffAdd GitGutterAdd
-hi link TelescopeResultsDiffChange GitGutterChange
-hi link TelescopeResultsDiffDelete GitGutterDelete
-hi link TelescopeResultsDiffUntracked Title
-
-" Nvim-tree support
-call s:h("NvimTreeFolderIcon", {"fg": s:purple})
-call s:h("NvimTreeFolderName", {"fg": s:blue})
-call s:h("NvimTreeRootFolder", {"fg": s:green})
-
-" nvim-cmp support
-hi link CmpItemMenu Comment
-call s:h("CmpItemKindDefault", {"fg": s:purple})
-hi link CmpItemAbbrMatch Pmenu
-hi link CmpItemKindDefault Pmenu
-hi link CmpItemKindFunction Function
-hi link CmpItemKindMethod CmpItemKindFunction
-hi link CmpItemKindModule PreProc
-hi link CmpItemKindStruct CmpItemKindModule
-hi link CmpItemKindText Comment
-hi link CmpItemKindSnippet Constant
-hi! link CmpItemKindReference CmpItemKindDefault
-hi! link CmpItemKindInterface CmpItemKindDefault
-
-" nvim terminal colors
 let g:terminal_color_0 = s:bg_bright.gui
 let g:terminal_color_1 = s:red.gui
 let g:terminal_color_2 = s:green.gui
