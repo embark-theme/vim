@@ -359,6 +359,10 @@ if has('nvim')
   hi link CmpItemKindSnippet Constant
   hi! link CmpItemKindReference CmpItemKindDefault
   hi! link CmpItemKindInterface CmpItemKindDefault
+
+  " Leap support
+  call s:h("LeapLabelPrimary", {"fg": s:bg_dark, "bg": s:dark_cyan, "gui": "bold"})
+  call s:h("LeapLabelSecondary", {"fg": s:bg_dark, "bg": s:purple})
 endif
 
 " == PLUGIN SUPPORT GROUPS ==
