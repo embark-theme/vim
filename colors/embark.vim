@@ -248,7 +248,6 @@ call s:h("PmenuThumb",    {"fg": s:norm, "bg": s:bg_dark})
 " Question - |hit-enter| prompt and yes/no questions.
 call s:h("Question",      {"fg": s:green})
 " QuickFixLine - Current |quickfix| item in the quickfix window. Combined with
-" TODO: This might be worth looking into
 " Search - Last search pattern highlighting (see 'hlsearch').
 call s:h("Search",        {"bg": s:dark_yellow, "fg": s:bg})
 " SpecialKey - Unprintable chars: Text displayed differently from what it is
