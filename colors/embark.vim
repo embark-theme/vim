@@ -187,7 +187,7 @@ call s:h("Todo",          {"fg": s:dark_yellow, "bg": s:bg, "gui": "bold", "cter
 " Generated with `:help highlight-default`
 "
 " ColorColumn - Used for the columns set with 'colorcolumn'.
-call s:h("ColorColumn",   {"bg": s:bg_dark})
+call s:h("ColorColumn",   {"bg": s:space2})
 " Conceal - Placeholder characters substituted for concealed
 call s:h("Conceal",       {"fg": s:norm})
 " Cursor - Character under the cursor.
