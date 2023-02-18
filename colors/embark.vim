@@ -48,12 +48,12 @@ let s:yellow = { "gui": "#ffe6b3", "cterm": "228", "cterm16": "3"}
 let s:dark_yellow = { "gui": "#F2B482", "cterm": "215", "cterm16": "11"}
 
 let s:blue = { "gui": "#91ddff", "cterm": "159", "cterm16": "4"}
-let s:dark_blue = { "gui": "#65b2ff", "cterm": "75", "cterm16": "12"}
+let s:dark_blue = { "gui": "#78a8ff", "cterm": "135", "cterm16": "13"}
 
 let s:purple = { "gui": "#d4bfff", "cterm": "141", "cterm16": "5"}
-let s:dark_purple = { "gui": "#a37acc", "cterm": "135", "cterm16": "13"}
+let s:dark_purple = { "gui": "#7676ff", "cterm": "75", "cterm16": "12"}
 
-let s:cyan = { "gui": "#87DFEB", "cterm": "122", "cterm16": "6"}
+let s:cyan = { "gui": "#ABF8F7", "cterm": "122", "cterm16": "6"}
 let s:dark_cyan = { "gui": "#63f2f1", "cterm": "121", "cterm16": "14"}
 
 let s:bg              = s:space1
