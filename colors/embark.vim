@@ -246,8 +246,7 @@ call s:h("PmenuSbar",     {"fg": s:norm, "bg": s:bg_dark})
 " PmenuThumb - Popup menu: Thumb of the scrollbar.
 call s:h("PmenuThumb",    {"fg": s:norm, "bg": s:bg_dark})
 " Question - |hit-enter| prompt and yes/no questions.
-" TODO: red is the wrong choice here
-call s:h("Question",      {"fg": s:red})
+call s:h("Question",      {"fg": s:green})
 " QuickFixLine - Current |quickfix| item in the quickfix window. Combined with
 " TODO: This might be worth looking into
 " Search - Last search pattern highlighting (see 'hlsearch').
