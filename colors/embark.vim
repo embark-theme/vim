@@ -214,8 +214,7 @@ call s:h("WinSeparator",     {"fg": s:bg_dark})
 " Folded - Line used for closed folds.
 call s:h("Folded",        {"fg": s:dark_purple})
 " FoldColumn - 'foldcolumn'
-" TODO: This shouldn't be yellow
-call s:h("FoldColumn",    {"fg": s:yellow})
+call s:h("FoldColumn",    {"fg": s:dark_purple})
 " SignColumn - Column where |signs| are displayed.
 call s:h("SignColumn",    {"fg": s:green})
 " IncSearch - 'incsearch' highlighting; also used for the text replaced with
