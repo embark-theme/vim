@@ -121,8 +121,9 @@ endfunction
 call s:h("Comment",       {"fg": s:norm_subtle, "gui": s:maybe_italic(""), "cterm": s:maybe_italic("")})
 
 " * Constant any constant
-call s:h("Constant",      {"fg": s:yellow})
+call s:h("Constant",      {"fg": s:purple})
 "   String  a string constant: "this is a string"
+call s:h("String",      {"fg": s:yellow})
 "   Character a character constant: 'c', '\n'
 "   Number  a number constant: 234, 0xff
 call s:h("Number",    {"fg": s:dark_yellow})
@@ -363,6 +364,36 @@ if has('nvim')
   " Leap support
   call s:h("LeapLabelPrimary", {"fg": s:bg_dark, "bg": s:dark_cyan, "gui": "bold"})
   call s:h("LeapLabelSecondary", {"fg": s:bg_dark, "bg": s:purple})
+
+  if has('nvim-0.8')
+    " Treesitter support
+    call s:h("@punctuation.bracket", {"fg": s:norm})
+
+    call s:h("@string.special", {"fg": s:dark_blue})
+    call s:h("@string.escape", {"fg": s:cyan})
+
+    call s:h("@function", {"fg": s:red})
+    call s:h("@function.call", {"fg": s:blue})
+    call s:h("@constructor", {"fg": s:purple})
+
+    call s:h("@keyword.operator", {"fg": s:cyan})
+
+    hi! link @constant.builtin Special
+    call s:h("@variable.builtin", {"fg": s:cyan})
+    call s:h("@symbol", {"fg": s:yellow})
+
+    call s:h("@text.literal", {"fg": s:cyan})
+    call s:h("@text.uri", {"fg": s:blue})
+    call s:h("@text.reference", {"fg": s:purple})
+    call s:h("@text.strong", {"gui": "bold"})
+    call s:h("@text.emphasis", {"gui": s:maybe_italic("")})
+    call s:h("@text.todo.unchecked", {"fg": s:dark_cyan, "gui": "bold"})
+    call s:h("@text.todo.checked", {"fg": s:norm_subtle})
+
+    hi! link @tag Keyword
+    hi! link @tag.delimiter Special
+    hi! link @tag.attribute Constant
+  endif
 endif
 
 " == PLUGIN SUPPORT GROUPS ==
@@ -405,6 +436,7 @@ hi! link jsxClosePunct jsxOpenPunct
 
 " Elixir
 call s:h("elixirVariable", {"fg": s:purple})
+call s:h("elixirAtom", {"fg": s:yellow})
 
 " tpope/vim-markdown
 call s:h("markdownBlockquote",          {"fg": s:norm})
