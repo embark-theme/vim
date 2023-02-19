@@ -157,7 +157,7 @@ call s:h("PreProc",       {"fg": s:green})
 "   PreCondit preprocessor #if, #else, #endif, etc.
 
 " * Type  int, long, char, etc.
-call s:h("Type",          {"fg": s:blue})
+call s:h("Type",          {"fg": s:purple})
 "   StorageClass static, register, volatile, etc.
 "   Structure struct, union, enum, etc.
 "   Typedef A typedef
