@@ -67,9 +67,9 @@ let s:head_a         = s:dark_blue
 let s:head_b         = s:blue
 let s:head_c         = s:dark_cyan
 
-let s:diff_del = { "gui": "#301E30", "cterm": "203", "cterm16": "9"}
+let s:diff_del = { "gui": "#411E35", "cterm": "203", "cterm16": "9"}
 let s:diff_add = { "gui": "#133246", "cterm": "119", "cterm16": "10"}
-let s:diff_changed = { "gui": "#211f42", "cterm": "215", "cterm16": "11"}
+let s:diff_changed = { "gui": "#22244C", "cterm": "215", "cterm16": "11"}
 
 " == UTILS AND HELPERS == 
 "
