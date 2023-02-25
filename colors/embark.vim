@@ -133,7 +133,7 @@ call s:h("Boolean",    {"fg": s:dark_yellow})
 call s:h("Float",    {"fg": s:dark_yellow})
 
 " * Identifier any variable name
-hi! link Identifier Normal
+call s:h("Identifier", {"fg": s:norm})
 "   Function function name (also: methods for classes)
 call s:h("Function",      {"fg": s:red})
 
