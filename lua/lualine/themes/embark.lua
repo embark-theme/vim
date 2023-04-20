@@ -33,8 +33,8 @@ local embark = {
     b = { fg = colors.space0, bg = colors.darkred },
   },
   replace = {
-    a = { fg = colors.space0, bg = colors.green, gui = "bold", },
-    b = { fg = colors.space0, bg = colors.darkgreen },
+    a = { fg = colors.space0, bg = colors.yellow, gui = "bold", },
+    b = { fg = colors.space0, bg = colors.darkred },
   },
   inactive = {
     a = { fg = colors.space4, bg = colors.space1, gui = "bold", },
