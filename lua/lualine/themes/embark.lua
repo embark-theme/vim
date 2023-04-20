@@ -14,7 +14,8 @@ local colors = {
   green        = "#a1efd3",
   darkgreen    = "#62d196",
   purple       = "#d4bfff",
-  darkpurple   = "#7676ff",
+  nebula10     = "#78A8ff",
+  nebula11     = "#7676ff",
 }
 
 local embark = {
@@ -33,8 +34,8 @@ local embark = {
     b = { fg = colors.space0, bg = colors.darkred },
   },
   replace = {
-    a = { fg = colors.space0, bg = colors.yellow, gui = "bold", },
-    b = { fg = colors.space0, bg = colors.darkred },
+    a = { fg = colors.space0, bg = colors.nebula10, gui = "bold", },
+    b = { fg = colors.space0, bg = colors.nebula11 },
   },
   inactive = {
     a = { fg = colors.space4, bg = colors.space1, gui = "bold", },
