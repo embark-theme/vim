@@ -365,6 +365,28 @@ if has('nvim')
   call s:h("LeapLabelPrimary", {"fg": s:bg_dark, "bg": s:dark_cyan, "gui": "bold"})
   call s:h("LeapLabelSecondary", {"fg": s:bg_dark, "bg": s:purple})
 
+  " nvim notify support
+  call s:h("NotifyERRORBorder", {"fg": s:red})
+  hi! link NotifyERRORTitle NotifyERRORBorder
+  hi! link NotifyERRORIcon NotifyERRORBorder
+
+  call s:h("NotifyWARNBorder", {"fg": s:yellow})
+  hi! link NotifyWARNTitle NotifyWARNBorder
+  hi! link NotifyWARNIcon NotifyWARNTitle
+
+  call s:h("NotifyINFOBorder", {"fg": s:green})
+  hi! link NotifyINFOTitle NotifyInfoBorder
+  hi! link NotifyINFOIcon NotifyInfoBorder
+  hi! link NotifyINFOBODY NotifyInfoBorder
+
+  call s:h("NotifyDEBUGBorder", {"fg": s:blue})
+  hi! link NotifyDEBUGTitle NotifyDEBUGBorder
+  hi! link NotifyDEBUGIcon NotifyDEBUGIcon
+
+  call s:h("NotifyTRACEBorder", {"fg": s:purple})
+  hi! link NotifyTRACETitle NotifyTRACEBorder
+  hi! link NotifyTRACEIcon NotifyTRACEBorder
+
   if has('nvim-0.8')
     " Treesitter support
     call s:h("@punctuation.bracket", {"fg": s:norm})
