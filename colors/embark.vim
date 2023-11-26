@@ -322,10 +322,10 @@ if has('nvim')
   hi link DiagnosticFloatingInfo DiagnosticSignInfo
   hi link DiagnosticFloatingWarn DiagnosticSignWarn
   hi link DiagnosticFloatingError DiagnosticSignError
-  call s:h("DiagnosticUnderlineHint", {"cterm": "undercurl", "gui": "undercurl", "fg": s:purple})
-  call s:h("DiagnosticUnderlineInfo", {"cterm": "undercurl", "gui": "undercurl", "fg": s:blue})
-  call s:h("DiagnosticUnderlineWarn", {"cterm": "undercurl", "gui": "undercurl", "fg": s:yellow})
-  call s:h("DiagnosticUnderlineError", {"cterm": "undercurl", "gui": "undercurl", "fg": s:red})
+  call s:h("DiagnosticUnderlineHint", {"cterm": "underline", "gui": "underline", "sp": s:purple})
+  call s:h("DiagnosticUnderlineInfo", {"cterm": "underline", "gui": "underline", "sp": s:blue})
+  call s:h("DiagnosticUnderlineWarn", {"cterm": "underline", "gui": "underline", "sp": s:yellow})
+  call s:h("DiagnosticUnderlineError", {"cterm": "underline", "gui": "underline", "sp": s:red})
 
   " Telescope support
   call s:h("TelescopeNormal", {"fg": s:astral0})
