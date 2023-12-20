@@ -211,7 +211,7 @@ call s:h("DiffText",      {"bg": s:diff_changed, "gui": "underline"})
 " ErrorMsg - Error messages on the command line.
 call s:h("ErrorMsg",      {"fg": s:dark_red})
 " WinSeparator - Separators between window splits.
-call s:h("WinSeparator",     {"fg": s:bg_dark})
+call s:h("WinSeparator",     {"fg": s:space3})
 " Folded - Line used for closed folds.
 call s:h("Folded",        {"fg": s:dark_purple})
 " FoldColumn - 'foldcolumn'
