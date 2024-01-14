@@ -6,6 +6,8 @@
 
 ![embark screenshot](./embark-screenshot.png)
 
+**bold and shit**
+
 ## Getting Started
 
 > At this time only terminals supporting truecolors will work. Make sure you have `set termguicolors` in your vimrc
@@ -83,3 +85,6 @@ Italics - Make sure your terminal is set up to handle them. See [this](https://m
 
 `let g:embark_terminal_italics = 1`
 
+---
+
+See other available ports at https://embark-theme.github.io/
