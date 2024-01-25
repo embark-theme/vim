@@ -389,21 +389,35 @@ if has('nvim')
 
   if has('nvim-0.8')
     " Treesitter support
-    call s:h("@punctuation.bracket", {"fg": s:norm})
+    call s:h("@keyword.operator", {"fg": s:cyan})
+    hi! link @constant.builtin Special
+    call s:h("@punctuation.bracket", {"fg": s:cyan})
+    call s:h("@variable.builtin", {"fg": s:cyan})
 
     call s:h("@string.special", {"fg": s:dark_blue})
     call s:h("@string.escape", {"fg": s:cyan})
+    call s:h("@string.special.symbol", {"fg": s:yellow})
 
+    call s:h("@module", {"fg": s:purple })
     call s:h("@function", {"fg": s:red})
     call s:h("@function.call", {"fg": s:blue})
     call s:h("@constructor", {"fg": s:purple})
 
-    call s:h("@keyword.operator", {"fg": s:cyan})
+    call s:h("@markup.literal", {"fg": s:cyan})
+    call s:h("@markup.link.uri", {"fg": s:blue})
+    call s:h("@markup.link", {"fg": s:purple})
+    call s:h("@markup.strong", {"gui": "bold"})
+    call s:h("@markup.emphasis", {"gui": s:maybe_italic("")})
+    call s:h("@markup.list.unchecked", {"fg": s:dark_cyan, "gui": "bold"})
+    call s:h("@markup.list.checked", {"fg": s:norm_subtle})
 
-    hi! link @constant.builtin Special
-    call s:h("@variable.builtin", {"fg": s:cyan})
+    hi! link @tag Keyword
+    hi! link @tag.delimiter Special
+    hi! link @tag.attribute Constant
+
+    " Deprecated nvim-treesitter highlights
+    " Will remove in a few months
     call s:h("@symbol", {"fg": s:yellow})
-
     call s:h("@text.literal", {"fg": s:cyan})
     call s:h("@text.uri", {"fg": s:blue})
     call s:h("@text.reference", {"fg": s:purple})
@@ -411,10 +425,6 @@ if has('nvim')
     call s:h("@text.emphasis", {"gui": s:maybe_italic("")})
     call s:h("@text.todo.unchecked", {"fg": s:dark_cyan, "gui": "bold"})
     call s:h("@text.todo.checked", {"fg": s:norm_subtle})
-
-    hi! link @tag Keyword
-    hi! link @tag.delimiter Special
-    hi! link @tag.attribute Constant
   endif
 endif
 
