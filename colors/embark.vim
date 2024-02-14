@@ -403,6 +403,7 @@ if has('nvim')
     call s:h("@function.call", {"fg": s:blue})
     call s:h("@constructor", {"fg": s:purple})
 
+    hi! link @markup.heading Title
     call s:h("@markup.raw", {"fg": s:cyan})
     call s:h("@markup.link.uri", {"fg": s:blue})
     call s:h("@markup.link", {"fg": s:purple})
