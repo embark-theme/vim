@@ -387,6 +387,11 @@ if has('nvim')
   hi! link NotifyTRACETitle NotifyTRACEBorder
   hi! link NotifyTRACEIcon NotifyTRACEBorder
 
+  " Which Key
+  call s:h("WhichKey", {"fg": s:blue})
+  call s:h("WhichKeyDesc", {"fg": s:astral1})
+  call s:h("WhichKeyGroup", {"fg": s:purple})
+
   if has('nvim-0.8')
     " Treesitter support
     call s:h("@keyword.operator", {"fg": s:cyan})
