@@ -392,6 +392,10 @@ if has('nvim')
   call s:h("WhichKeyDesc", {"fg": s:astral1})
   call s:h("WhichKeyGroup", {"fg": s:purple})
 
+  " Neotree
+  call s:h("NeoTreeGitUntracked", {"fg": s:astral0, "gui": s:maybe_italic("bold")})
+  call s:h("NeoTreeGitUnStaged", {"fg": s:dark_cyan})
+
   if has('nvim-0.8')
     " Treesitter support
     call s:h("@keyword.operator", {"fg": s:cyan})
