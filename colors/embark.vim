@@ -237,9 +237,10 @@ hi! link MoreMsg ModeMsg
 call s:h("NonText",       {"fg": s:bg_bright})
 " Normal - Normal text.
 call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
-" NormalFloat - Normal text in floating windows.
 " Pmenu - Popup menu: Normal item.
 call s:h("Pmenu",         {"fg": s:norm, "bg": s:space2})
+" NormalFloat - Normal text in floating windows.
+hi! link NormalFloat Pmenu 
 " PmenuSel - Popup menu: Selected item.
 call s:h("PmenuSel",      {"fg": s:purple, "bg": s:bg})
 " PmenuSbar - Popup menu: Scrollbar.
