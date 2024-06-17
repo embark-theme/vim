@@ -67,9 +67,9 @@ let s:head_a         = s:dark_blue
 let s:head_b         = s:blue
 let s:head_c         = s:dark_cyan
 
-let s:diff_del = { "gui": "#411E35", "cterm": "203", "cterm16": "9"}
-let s:diff_add = { "gui": "#133246", "cterm": "119", "cterm16": "10"}
-let s:diff_changed = { "gui": "#22244C", "cterm": "215", "cterm16": "11"}
+let s:diff_del = { "gui": "#5E3859", "cterm": "203", "cterm16": "9"}
+let s:diff_add = { "gui": "#2D5059", "cterm": "119", "cterm16": "10"}
+let s:diff_changed = { "gui": "#38325A", "cterm": "215", "cterm16": "11"}
 
 " == UTILS AND HELPERS == 
 "
@@ -206,7 +206,7 @@ call s:h("DiffChange",    {"bg": s:diff_changed})
 " DiffDelete - Diff mode: Deleted line. |diff.txt|
 call s:h("DiffDelete",    {"fg": s:visual, "bg": s:diff_del})
 " DiffText - Diff mode: Changed text within a changed line. |diff.txt|
-call s:h("DiffText",      {"bg": s:diff_changed, "gui": "underline"})
+call s:h("DiffText",      {"bg": s:diff_changed, "gui": "underline", "sp": s:dark_blue })
 " EndOfBuffer	Filler lines (~) after the end of the buffer.
 " ErrorMsg - Error messages on the command line.
 call s:h("ErrorMsg",      {"fg": s:dark_red})
