@@ -553,7 +553,7 @@ hi! link xmlTagName                 htmlTagName
 
 call s:h("qfLineNr",      {"fg": s:norm_subtle})
 
-" Signify, git-gutter
+" Signify, git-gutter, gitsigns.nvim
 hi link SignifySignAdd              LineNr
 hi link SignifySignDelete           LineNr
 hi link SignifySignChange           LineNr
@@ -561,6 +561,11 @@ call s:h("GitGutterAdd",{"fg": s:green, "bg": s:bg})
 call s:h("GitGutterDelete",{"fg": s:red, "bg": s:bg})
 call s:h("GitGutterChange",{"fg": s:yellow, "bg": s:bg})
 call s:h("GitGutterChangeDelete",{"fg": s:red, "bg": s:bg})
+hi link GitSignsAdd GitGutterAdd
+hi link GitSignsChange GitGutterChange
+hi link GitSignsDelete GitGutterDelete
+hi link GitSignsChangedelete GitGutterDelete
+hi link GitSignsTopdelete GitGutterDelete
 
 " Fugitive
 call s:h("diffAdded",     {"fg": s:green})
