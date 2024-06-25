@@ -6,8 +6,6 @@
 
 ![embark screenshot](./embark-screenshot.png)
 
-**bold and shit**
-
 ## Getting Started
 
 > At this time only terminals supporting truecolors will work. Make sure you have `set termguicolors` in your vimrc
