@@ -365,7 +365,7 @@ if has('nvim')
   " Leap/Flash support
   call s:h("LeapLabelPrimary", {"fg": s:bg_dark, "bg": s:dark_cyan, "gui": "bold"})
   call s:h("LeapLabelSecondary", {"fg": s:bg_dark, "bg": s:purple})
-  hi! link FlashLabel link LeapLabelPrimary
+  hi! link FlashLabel LeapLabelPrimary
 
   " nvim notify support
   call s:h("NotifyERRORBorder", {"fg": s:red})
