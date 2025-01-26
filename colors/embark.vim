@@ -29,7 +29,7 @@ endif
 " Space
 let s:space0 = { "gui": "#100E23", "cterm": "232", "cterm16": "0"}
 let s:space1 = { "gui": "#1e1c31", "cterm": "233", "cterm16": "NONE"}
-let s:space2 = { "gui": "#2D2B40", "cterm": "233", "cterm16": "NONE" }
+let s:space2 = { "gui": "#2F2A47", "cterm": "233", "cterm16": "NONE" }
 let s:space3 = { "gui": "#3E3859", "cterm": "236", "cterm16": "8"}
 let s:space4 = { "gui": "#585273", "cterm": "236", "cterm16": "8"}
 
@@ -213,7 +213,7 @@ call s:h("ErrorMsg",      {"fg": s:dark_red})
 " WinSeparator - Separators between window splits.
 call s:h("WinSeparator",     {"fg": s:space3})
 " Folded - Line used for closed folds.
-call s:h("Folded",        {"fg": s:dark_purple})
+call s:h("Folded",        {"fg": s:purple, "bg": s:space2})
 " FoldColumn - 'foldcolumn'
 call s:h("FoldColumn",    {"fg": s:dark_purple})
 " SignColumn - Column where |signs| are displayed.
