@@ -398,6 +398,14 @@ if has('nvim')
   call s:h("NeoTreeGitUntracked", {"fg": s:astral0, "gui": s:maybe_italic("bold")})
   call s:h("NeoTreeGitUnStaged", {"fg": s:dark_cyan})
 
+  " Render Markdown
+  hi RenderMarkdownH1Bg guifg=#1e1c31 guibg=#7676FF
+  hi RenderMarkdownH2Bg guifg=#1e1c31 guibg=#78A8FF
+  hi RenderMarkdownH3Bg guifg=#1e1c31 guibg=#54E3E1
+  hi RenderMarkdownH4Bg guifg=#1e1c31 guibg=#91DFD3
+  hi RenderMarkdownH5Bg guifg=#1e1c31 guibg=#FDD8A3
+  hi RenderMarkdownH6Bg guifg=#1e1c31 guibg=#FDD8A3
+
   if has('nvim-0.8')
     " Treesitter support
     call s:h("@keyword.operator", {"fg": s:cyan})
