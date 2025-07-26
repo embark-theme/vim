@@ -399,12 +399,12 @@ if has('nvim')
   call s:h("NeoTreeGitUnStaged", {"fg": s:dark_cyan})
 
   " Render Markdown
-  hi RenderMarkdownH1Bg guifg=#1e1c31 guibg=#7676FF
-  hi RenderMarkdownH2Bg guifg=#1e1c31 guibg=#78A8FF
-  hi RenderMarkdownH3Bg guifg=#1e1c31 guibg=#54E3E1
-  hi RenderMarkdownH4Bg guifg=#1e1c31 guibg=#91DFD3
-  hi RenderMarkdownH5Bg guifg=#1e1c31 guibg=#FDD8A3
-  hi RenderMarkdownH6Bg guifg=#1e1c31 guibg=#FDD8A3
+  call s:h("RenderMarkdownH1Bg", {"fg": s:dark_purple, "gui": "underline,bold"})
+  call s:h("RenderMarkdownH2Bg", {"fg": s:dark_blue, "gui": "underline,bold"})
+  call s:h("RenderMarkdownH3Bg", {"fg": s:dark_cyan, "gui": "underline,bold"})
+  call s:h("RenderMarkdownH4Bg", {"fg": s:green, "gui": "underline,bold"})
+  call s:h("RenderMarkdownH5Bg", {"fg": s:yellow, "gui": "underline,bold"})
+  call s:h("RenderMarkdownH6Bg", {"fg": s:yellow, "gui": "underline,bold"})
 
   if has('nvim-0.8')
     " Treesitter support
