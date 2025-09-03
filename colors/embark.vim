@@ -331,6 +331,7 @@ if has('nvim')
   " Telescope support
   call s:h("TelescopeNormal", {"fg": s:astral0})
   hi link TelescopeBorder LineNr
+  call s:h("TelescopeSelectionCaret", {"bg": s:visual, "fg": s:green})
   call s:h("TelescopeSelection", {"bg": s:visual, "fg": s:astral1})
   hi link TelescopeMatching String
   call s:h("TelescopePreviewTitle", {"fg": s:space0, "bg": s:purple})
