@@ -8,7 +8,13 @@
 
 ## Getting Started
 
-> At this time only terminals supporting truecolors will work. Make sure you have `set termguicolors` in your vimrc
+> [!IMPORTANT]
+> At this time only terminals supporting truecolors will work.
+> Make sure you have `termguicolors` enabled.
+>
+> For Vimscript: `set termguicolors`
+>
+> For Lua (Neovim): `vim.o.termguicolors = true`
 
 First install using your plugin manager. Rename package to `embark` using your plugin manager's built in facilities to do so.
 
