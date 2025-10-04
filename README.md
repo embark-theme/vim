@@ -10,14 +10,27 @@
 
 > At this time only terminals supporting truecolors will work. Make sure you have `set termguicolors` in your vimrc
 
-First install using your plugin manager. Rename package to embark using your plugin manager's built in facilities to do so.
+First install using your plugin manager. Rename package to `embark` using your plugin manager's built in facilities to do so.
+
+### lazy.nvim
+
+```lua
+{
+  'embark-theme/vim',
+  lazy = false,
+  priority = 1000,
+  name = 'embark'
+}
+```
 
 ### packer.nvim
+
 ```lua
 use { 'embark-theme/vim', as = 'embark' }
 ```
 
 ### vim-plug
+
 ```vim
 Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
 ```
