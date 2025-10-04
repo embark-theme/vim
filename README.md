@@ -29,12 +29,6 @@ First install using your plugin manager. Rename package to `embark` using your p
 }
 ```
 
-### packer.nvim
-
-```lua
-use { 'embark-theme/vim', as = 'embark' }
-```
-
 ### vim-plug
 
 ```vim
@@ -53,18 +47,6 @@ Lua (Neovim):
 
 ```lua
 vim.cmd.colorscheme('embark')
-```
-
-For `packer.nvim` users the colorscheme can be placed in the `config` callback:
-
-```lua
-use {
-  'embark-theme/vim',
-  as = 'embark',
-  config = function()
-    vim.cmd.colorscheme('embark')
-  end
-}
 ```
 
 For `lazy.nvim` users you can do a similar thing:
