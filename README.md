@@ -77,18 +77,36 @@ vim.cmd.colorscheme('embark')
 
 A lightline theme is also available. Just set your colorscheme to `'embark'`.
 
+Vimscript:
+
 ```vim
 let g:lightline = {
       \ 'colorscheme': 'embark',
       \ }
 ```
 
+Lua (for Neovim):
+
+```lua
+vim.g.lightline = {
+  colorscheme = 'embark'
+}
+```
+
 ### Airline support
 
 Airline should just pick up on the theme automatically. If not you can set manually:
 
+Vimscript:
+
 ```vim
 let g:airline_theme = 'embark'
+```
+
+Lua (for Neovim):
+
+```lua
+vim.g.airline_theme = 'embark'
 ```
 
 ### Lualine support
