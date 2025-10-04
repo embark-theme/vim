@@ -16,7 +16,8 @@
 >
 > For Lua (Neovim): `vim.o.termguicolors = true`
 
-First install using your plugin manager. Rename package to `embark` using your plugin manager's built in facilities to do so.
+First install using your plugin manager.
+Don't forget to change the plugin name to `embark` using your plugin manager's capabilities.
 
 ### lazy.nvim
 
@@ -29,13 +30,21 @@ First install using your plugin manager. Rename package to `embark` using your p
 }
 ```
 
+### paq-nvim
+
+```lua
+require('paq') {
+  { 'embark-theme/vim', as = 'embark' }
+}
+```
+
 ### vim-plug
 
 ```vim
 Plug 'embark-theme/vim', { 'as': 'embark', 'branch': 'main' }
 ```
 
-Then set embark as colorscheme.
+Then set embark as your colorscheme.
 
 Vimscript:
 
@@ -49,19 +58,20 @@ Lua (Neovim):
 vim.cmd.colorscheme('embark')
 ```
 
-For `lazy.nvim` users you can do a similar thing:
-
-```lua
-{
-  'embark-theme/vim',
-  lazy = false,
-  priority = 1000,
-  name = 'embark',
-  config = function()
-    vim.cmd.colorscheme('embark')
-  end
-}
-```
+> [!TIP]
+> For `lazy.nvim` users the colorscheme can be set up in the `config` callback:
+>
+> ```lua
+> {
+>   'embark-theme/vim',
+>   lazy = false,
+>   priority = 1000,
+>   name = 'embark',
+>   config = function()
+>     vim.cmd.colorscheme('embark')
+>   end
+> }
+> ```
 
 ### Lightline support
 
