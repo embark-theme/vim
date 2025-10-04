@@ -20,25 +20,25 @@ local colors = {
 
 local embark = {
   normal = {
-    a = { fg = colors.space0, bg = colors.cyan, gui = "bold", },
+    a = { fg = colors.space0, bg = colors.cyan, gui = "bold" },
     b = { fg = colors.astral1, bg = colors.space2 },
     c = { fg = colors.astral1, bg = colors.space0 },
     y = { fg = colors.space0, bg = colors.darkcyan },
   },
   visual = {
-    a = { fg = colors.space0, bg = colors.yellow, gui = "bold", },
+    a = { fg = colors.space0, bg = colors.yellow, gui = "bold" },
     b = { fg = colors.space0, bg = colors.darkyellow },
   },
   insert = {
-    a = { fg = colors.space0, bg = colors.red, gui = "bold", },
+    a = { fg = colors.space0, bg = colors.red, gui = "bold" },
     b = { fg = colors.space0, bg = colors.darkred },
   },
   replace = {
-    a = { fg = colors.space0, bg = colors.nebula10, gui = "bold", },
+    a = { fg = colors.space0, bg = colors.nebula10, gui = "bold" },
     b = { fg = colors.space0, bg = colors.nebula11 },
   },
   inactive = {
-    a = { fg = colors.space4, bg = colors.space1, gui = "bold", },
+    a = { fg = colors.space4, bg = colors.space1, gui = "bold" },
     b = { fg = colors.space4, bg = colors.space1 },
     c = { fg = colors.space4, bg = colors.space2 },
     x = { fg = colors.space0, bg = colors.purple },
@@ -46,3 +46,4 @@ local embark = {
 }
 
 return embark
+-- vim:ts=2:sts=2:sw=2:et:
