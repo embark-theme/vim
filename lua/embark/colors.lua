@@ -304,16 +304,7 @@ M.colors = {
 ---@param group string
 ---@param style vim.api.keyset.highlight
 function M.h(group, style)
-  ---@type vim.api.keyset.highlight
-  local fallback = {
-    fg = "NONE",
-    bg = "NONE",
-    sp = "NONE",
-    ctermfg = "NONE",
-    ctermbg = "NONE",
-  }
-
-  vim.api.nvim_set_hl(0, group, vim.tbl_deep_extend("keep", style, fallback))
+  vim.api.nvim_set_hl(0, group, style)
 end
 
 function M.setup()
