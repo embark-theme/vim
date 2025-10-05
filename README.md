@@ -1,6 +1,6 @@
 <div align="center">
 
-![Embark Logo](assets/Embark.svg)
+[![Embark Logo](assets/Embark.svg)](#embark-vim)
 
 **An ambitious Vim theme.**
 
