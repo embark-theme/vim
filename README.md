@@ -1,10 +1,16 @@
-<p align="center"><img src="Embark.svg" alt="Embark Logo"/></p>
+<div align="center">
 
-<p align="center"><strong>An ambitious Vim theme.</strong></p>
+![Embark Logo](assets/Embark.svg)
 
-<p align="center"><em>"Man cannot discover new oceans unless he has the courage to lose sight of the shore. - Andre Gide"</em></p>
+**An ambitious Vim theme.**
 
-![embark screenshot](./embark-screenshot.png)
+_"Man cannot discover new oceans unless he has the courage to lose sight of the shore. - Andre Gide"_
+
+![Embark Screenshot](./assets/embark-screenshot.png)
+
+</div>
+
+---
 
 ## Getting Started
 
