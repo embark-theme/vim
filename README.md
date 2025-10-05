@@ -4,7 +4,7 @@
 
 **An ambitious Vim theme.**
 
-_"Man cannot discover new oceans unless he has the courage to lose sight of the shore. - Andre Gide"_
+<p><em><ins>Man cannot discover new oceans unless he has the courage to lose sight of the shore.</ins><br />- Andre Gide</em></p>
 
 ![Embark Screenshot](./assets/embark-screenshot.png)
 
