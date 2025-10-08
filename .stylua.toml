@@ -1,0 +1,12 @@
+call_parentheses = "Always"
+collapse_simple_statement = "Never"
+column_width = 100
+indent_type = "Spaces"
+indent_width = 2
+line_endings = "Unix"
+quote_style = "AutoPreferDouble"
+space_after_function_names = "Never"
+syntax = 'LuaJIT'
+
+[sort_requires]
+enabled = false
