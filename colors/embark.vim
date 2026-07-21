@@ -349,6 +349,21 @@ if has('nvim')
   call s:h("NvimTreeFolderName", {"fg": s:blue})
   call s:h("NvimTreeRootFolder", {"fg": s:green})
 
+  " mini.icons support
+  " Defined explicitly (fg only) so icons don't inherit backgrounds from
+  " groups they'd otherwise default-link to (e.g. Diagnostic* groups carry
+  " an intentional dark bg for virtual text banners, which would otherwise
+  " leak into any icon mini.icons colors as Blue/Cyan/Yellow/Red).
+  call s:h("MiniIconsAzure",  {"fg": s:blue})
+  call s:h("MiniIconsBlue",   {"fg": s:dark_blue})
+  call s:h("MiniIconsCyan",   {"fg": s:cyan})
+  call s:h("MiniIconsGreen",  {"fg": s:green})
+  call s:h("MiniIconsGrey",   {"fg": s:norm_subtle})
+  call s:h("MiniIconsOrange", {"fg": s:dark_yellow})
+  call s:h("MiniIconsPurple", {"fg": s:purple})
+  call s:h("MiniIconsRed",    {"fg": s:red})
+  call s:h("MiniIconsYellow", {"fg": s:yellow})
+
   " nvim-cmp support
   hi link CmpItemMenu Comment
   call s:h("CmpItemKindDefault", {"fg": s:purple})
@@ -389,6 +404,45 @@ if has('nvim')
   call s:h("NotifyTRACEBorder", {"fg": s:purple})
   hi! link NotifyTRACETitle NotifyTRACEBorder
   hi! link NotifyTRACEIcon NotifyTRACEBorder
+
+  " Snacks support
+  call s:h("SnacksNormal", {"fg": s:norm, "bg": s:bg})
+  hi link SnacksNormalNC SnacksNormal
+  call s:h("SnacksWinBar", {"fg": s:norm_subtle, "bg": s:bg})
+  hi link SnacksWinBarNC SnacksWinBar
+  hi link SnacksTitle Title
+  hi link SnacksFooter Comment
+  hi link SnacksWinSeparator WinSeparator
+
+  call s:h("SnacksDashboardNormal", {"fg": s:norm, "bg": s:bg})
+  call s:h("SnacksDashboardIcon", {"fg": s:purple})
+  call s:h("SnacksDashboardDesc", {"fg": s:blue})
+  call s:h("SnacksDashboardKey", {"fg": s:green})
+  hi link SnacksDashboardHeader Title
+  hi link SnacksDashboardFooter Comment
+
+  call s:h("SnacksInputNormal", {"fg": s:norm, "bg": s:bg})
+  hi link SnacksInputBorder LineNr
+  hi link SnacksInputTitle Title
+
+  call s:h("SnacksNotifierHistory", {"fg": s:norm, "bg": s:bg})
+
+  call s:h("SnacksIndent", {"fg": s:space3})
+  call s:h("SnacksIndentScope", {"fg": s:purple})
+  hi link SnacksIndentChunk SnacksIndentScope
+
+  " Snacks picker git status
+  " Defined explicitly so these don't default-link to Diagnostic* groups,
+  " which carry an intentional dark bg for virtual text banners that would
+  " otherwise leak into every row of a git-status picker.
+  call s:h("SnacksPickerGitStatus",         {"fg": s:norm_subtle})
+  call s:h("SnacksPickerGitStatusAdded",    {"fg": s:green})
+  call s:h("SnacksPickerGitStatusModified", {"fg": s:yellow})
+  call s:h("SnacksPickerGitStatusDeleted",  {"fg": s:red})
+  call s:h("SnacksPickerGitStatusRenamed",  {"fg": s:blue})
+  call s:h("SnacksPickerGitStatusCopied",   {"fg": s:purple})
+  call s:h("SnacksPickerGitStatusUnmerged", {"fg": s:red})
+  call s:h("SnacksPickerGitStatusStaged",   {"fg": s:purple})
 
   " Which Key
   call s:h("WhichKey", {"fg": s:blue})
